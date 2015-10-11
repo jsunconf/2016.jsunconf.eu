@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>JSUnconf 2016</title>
+
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:800,300,100&text=Hello%20World' rel='stylesheet' type='text/css'>
+
+    <style media='screen'>
+      *, *:before, *:after {
+        box-sizing: border-box;
+      }
+      html {
+        min-height: 100%;
+        font-size: 100%;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+      body {
+        font-family: Raleway, sans-serif;
+        background: #CAC4C4 url('background.jpg') no-repeat right center;
+        background-size: cover;
+        font-size: 1rem;
+        line-height: 1.2;
+        color: #fff;
+        min-height: 100%;
+        padding: 10% 7.5%;
+        -webkit-font-feature-settings: 'kern' 1;
+        -moz-font-feature-settings: 'kern' 1;
+        -o-font-feature-settings: 'kern' 1;
+      }
+      ::-moz-selection {
+        background: rgba(145,28,128,0.8);
+      }
+      ::selection {
+        background: rgba(145,28,128,0.8);
+      }
+      header {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 4.5em;
+      }
+      .logo {
+        vertical-align: bottom;
+        width: 50%;
+        max-width: 17.1875em;
+        margin-bottom: 3em;
+      }
+      h1 {
+        font-size: 2.25em;
+        font-weight: 100;
+        text-transform: uppercase;
+        margin: 0;
+      }
+      h1 strong {
+        font-weight: 800;
+      }
+      .stay-up-to-date {
+        font-size: 1.25rem;
+        line-height: 1.666;
+        position: relative;
+        margin: 0 auto;
+      }
+      .stay-up-to-date input[type="email"] {
+        font-weight: 300;
+        line-height: inherit;
+        width: 100%;
+        display: inline-block;
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid #fff;
+        padding-right: 2.2em;
+      }
+      .stay-up-to-date button {
+        font-weight: 800;
+        line-height: inherit;
+        background: transparent;
+        border: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      .stay-up-to-date button:after {
+        content: "";
+        display: inline-block;
+        width: 0.5em;
+        height: .6em;
+        background: transparent url("arrow-right.svg") no-repeat scroll 50% center;
+        background-size: 100%;
+        vertical-align: baseline;
+        margin-left: 0.3em;
+      }
+      .stay-up-to-date label {
+        font-size: 0.5833333333em;
+      }
+      @media (min-width: 500px) {
+        h1 {
+          font-size: 3.5em;
+        }
+        .stay-up-to-date {
+          font-size: 1.5rem;
+          max-width: 11.458333333em;
+        }
+      }
+      @media (min-width: 865px) {
+        body {
+          background-size: auto;
+        }
+        header {
+          text-align: left;
+        }
+        .logo {
+          margin-right: 3.125em;
+          margin-bottom: 0;
+        }
+        h1 {
+          display: inline-block;
+          max-width: 7.25em;
+        }
+        .stay-up-to-date {
+          margin: 0;
+        }
+      }
+      @media (min-width: 1000px) {
+        body {
+          padding: 8.125em 6.25em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="jsunconflogo.svg" alt="JSUnconf" />
+      <h1>Hamburg<br />April 2016 <br />This is <strong>your</strong> conference</h1>
+    </header>
+    <form class="stay-up-to-date">
+      <input type="email" id="email" name="email" placeholder="your email address" />
+      <button type="submit" name="button">ok</button>
+      <label for="email">stay tuned for updates</label>
+    </form>
+  </body>
+</html>
