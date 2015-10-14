@@ -140,10 +140,13 @@
         background-size: 100%;
         vertical-align: baseline;
         margin-left: 0.3em;
-        transition: transform .3s ease-in-out;
+        -webkit-transition: -webkit-transform .3s ease-in-out;
+                transition: transform .3s ease-in-out;
       }
       .stay-up-to-date button:hover:after, .stay-up-to-date button:focus:after {
-        transform: translateX(0.2em);
+        -webkit-transform: translateX(0.2em);
+            -ms-transform: translateX(0.2em);
+                transform: translateX(0.2em);
       }
       .stay-up-to-date label {
         font-size: 0.5833333333em;
