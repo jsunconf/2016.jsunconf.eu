@@ -1,0 +1,27 @@
+{
+  "name": "2016.jsunconf.eu",
+  "version": "1.0.0",
+  "description": "The 2016 edition of the jsunconf website",
+  "main": "index.js",
+  "dependencies": {
+    "metalsmith": "^2.1.0"
+  },
+  "devDependencies": {
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-permalinks": "^0.4.0",
+    "metalsmith-templates": "^0.7.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsunconf/2016.jsunconf.eu.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jsunconf/2016.jsunconf.eu/issues"
+  },
+  "homepage": "https://github.com/jsunconf/2016.jsunconf.eu#readme"
+}
