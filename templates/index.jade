@@ -1,0 +1,12 @@
+extends partials/layout
+
+
+block main
+  if collections.news && collections.news.length > 0
+    each post in collections.news
+      h2
+        a(href='/'+post.path)!= post.title
+      div!= post.excerpt
+  else
+    h2= collections.news.length
+    h2 there ain't no news here, man

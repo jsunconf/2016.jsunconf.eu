@@ -1,5 +1,5 @@
 ---
-title: popst
+title: news teil 2
 date: 2012-08-20
 template: post.jade
 ---
