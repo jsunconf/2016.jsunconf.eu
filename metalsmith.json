@@ -1,0 +1,23 @@
+{
+    "metadata": {
+        "title": "jsunconf 2016",
+        "description": "The unconference that started it all."
+    },
+    "plugins": {
+      "metalsmith-collections": {
+        "news": {
+          "pattern": "post*"
+        }
+      },
+        "metalsmith-markdown": {},
+        "metalsmith-permalinks": {
+            "pattern": ":title"
+        },
+        "metalsmith-templates": {
+          "pretty": true,
+          "engine": "jade",
+          "directory": "templates"
+        },
+        "metalsmith-stylus": {}
+    }
+}
