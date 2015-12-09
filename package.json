@@ -7,6 +7,7 @@
     "metalsmith": "^2.1.0"
   },
   "devDependencies": {
+    "gh-pages": "^0.8.0",
     "light-server": "^1.1.2",
     "metalsmith-collections": "^0.7.0",
     "metalsmith-markdown": "^0.2.1",
@@ -22,7 +23,8 @@
     "server": "light-server -s ./build/ -p 8080 -w 'src/**/*, templates/**/* # npm run build'",
     "clean": "rm -rf build",
     "deploy": "npm run clean && npm run build && gh-pages -d build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "ci-deploy": "if [ \"$TRAVIS_PULL_REQUEST\" = \"false\" ] && [ \"$TRAVIS_BRANCH\" = \"master\" ]; then npm run deploy; fi;",
+    "test": "npm run ci-deploy"
   },
   "repository": {
     "type": "git",
