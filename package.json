@@ -22,7 +22,7 @@
     "dev": "npm run clean && npm run build && npm run server",
     "server": "light-server -s ./build/ -p 8080 -w 'src/**/*, templates/**/* # npm run build'",
     "clean": "rm -rf build",
-    "deploy": "npm run clean && npm run build && gh-pages -d build",
+    "deploy": "npm run clean && npm run build && node tools/deploy.js",
     "ci-deploy": "if [ \"$TRAVIS_PULL_REQUEST\" = \"false\" ] && [ \"$TRAVIS_BRANCH\" = \"master\" ]; then npm run deploy; fi;",
     "test": "npm run ci-deploy"
   },
