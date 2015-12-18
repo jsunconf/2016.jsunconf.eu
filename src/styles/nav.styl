@@ -1,0 +1,21 @@
+.navigation
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  background: $backgroundBeige
+
+  &__list
+    display: none
+  &__ticket-button
+    display: block
+    position: absolute
+    right: 0
+    top: -6px
+    @media $mqNormal
+      display: none
+
+    &--desktop
+      display: none
+      @media $mqNormal
+        display: block

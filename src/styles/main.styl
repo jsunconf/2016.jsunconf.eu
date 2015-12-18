@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:800,300,100');
+@import '_vars'
+
 *, *:before, *:after
   box-sizing: border-box
 
@@ -8,7 +11,7 @@ html
 
 body
   font-family: Raleway, sans-serif
-  background: #CAC4C4 url('../images/background.jpg') no-repeat right bottom
+  background: $backgroundBeige url('../images/background.jpg') no-repeat right bottom
   background-size: 160%
   font-size: 1rem
   line-height: 1.2
@@ -151,3 +154,6 @@ h2
     background-size: 60%
     background-position: right 9em
     padding: 9em 4.6875em
+
+@import 'section'
+@import 'nav'

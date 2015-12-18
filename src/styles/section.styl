@@ -1,0 +1,43 @@
+.section
+  &--left, &--right, &--center
+    text-align: center
+    @media $mqNormal
+      width: 50%
+
+  &--left
+    @media $mqNormal
+      text-align: left
+
+  &--right
+    @media $mqNormal
+      text-align: right
+      margin-left: 50%
+
+
+  &--center
+    @media $mqNormal
+      text-align: center
+      width: 80%
+      margin-left: 10%
+
+  &__copy
+    font-size: emCalc(18)
+    line-height: emCalc(28, 18)
+
+  &__title
+    font-size: emCalc(40)
+    font-weight: 100
+
+  &--strong
+    font-weight: 800
+
+
+.button
+  background: $lighterBlue
+  display: inline-block
+  border: $blue solid
+  border-width: 0 6px 6px 0
+  padding: emCalc(8, 18)
+  border-radius: 6px
+  font-size: remCalc(18)
+  line-height: emCalc(36, 18)
