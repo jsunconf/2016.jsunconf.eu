@@ -1,19 +1,22 @@
 extends partials/layout
 
-
 block main
-  header
-    img.logo(src='images/jsunconflogo.svg', alt='JSUnconf')
-    h2
-      | Hamburg
-      br
-      span.separator
-      |  April 2016
-    h1
-      | This is
-      strong
-        |  your
-      |  conference
+
+  nav.navigation
+    //- ul.navigation__list
+    //-   li.navigation__list--item Tickets
+
+    button.button.navigation__ticket-button
+      | Get your €59 Early Bird Ticket soon
+
+  header.main-header
+    img.main-header__logo(src='images/jsunconflogo.svg', alt='JSUnconf')
+
+    p
+      | Hamburg April 2016
+    p.main-header__title
+      | This is <strong> your</strong> conference
+
   // Begin MailChimp Signup Form
   #mc_embed_signup
     form#mc-embedded-subscribe-form.validate.stay-up-to-date(action='//jsunconf.us11.list-manage.com/subscribe/post?u=562adf61069508a950eb241c9&id=f013091375', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
@@ -31,18 +34,18 @@ block main
           button#mc-embedded-subscribe.button(type='submit', name='subscribe') ok
   // End mc_embed_signup
 
-  section.section--left
-    .section__title Title left
-    .section__copy Lorem Ipsum Dolor zit amet.
-    .button Tickets soon
-  section.section--right
-    .section__title Title right
-    .section__copy Lorem Ipsum Dolor zit amet.
-  section.section--center
-    .section__title Title center
-    .section__copy Lorem 
-      span.section--strong Ipsum 
-      |  Dolor zit amet.
+  //- section.section--left
+  //-   .section__title Title left
+  //-   .section__copy Lorem Ipsum Dolor zit amet.
+  //-   .button Tickets soon
+  //- section.section--right
+  //-   .section__title Title right
+  //-   .section__copy Lorem Ipsum Dolor zit amet.
+  //- section.section--center
+  //-   .section__title Title center
+  //-   .section__copy Lorem 
+  //-     span.section--strong Ipsum 
+  //-     |  Dolor zit amet.
   script.
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -50,9 +53,3 @@ block main
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
     ga('create', 'UA-44357704-6', 'auto');
     ga('send', 'pageview');
-  nav.navigation
-    .burger--menu =
-    ul.navigation__list
-      li.navigation__list--item Tickets
-    .button.button__tickets.navigation__ticket-button.navigation__ticket-button--desktop Get your €59 Early Bird Ticket soon
-    .button.button__tickets.navigation__ticket-button Tickets
