@@ -1,0 +1,23 @@
+.sponsor
+  position: absolute
+  left: 0
+  padding-bottom: 500px
+  top: 330vh
+
+  @media $mqSmall
+    top: 250vh
+  @media $mqMiddle
+    padding-bottom: 100px
+    top: 160vh
+    text-align: left
+  @media $mqNormal
+    top: 150vh
+  & .section
+    &__title
+      margin-bottom: emCalc(26, 60)
+    &__subtitle
+      margin: emCalc(30, 18) 0 emCalc(16, 18) 0
+    &__copy
+      line-height: emCalc(34, 18)
+  .button
+    margin: emCalc(24) 0 0 0

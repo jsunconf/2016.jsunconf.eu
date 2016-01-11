@@ -35,10 +35,10 @@ body
 
   padding: 0 emCalc(25px)
   background: $backgroundColor
-  background-image: url('../images/background.jpg')
+  background-image:  url('../images/ticket.png'),   url('../images/keyvisual.png'), url('../images/sponsor.png')
   background-repeat: no-repeat
-  background-position: right 100px
-  background-size: 160%
+  background-position: center 275vh, right 100vh, center 415vh
+  background-size: 50vh, 90vh, 50vh
 
   font-family: Raleway, sans-serif
   line-height: 1.2
@@ -47,14 +47,17 @@ body
 
   min-height: 100%
 
-  @media (min-width: 700px)
-    background-size: 120%
+  @media $mqSmall
+    background-position: center 195vh, right 60vh, center 290vh
+    background-size: 50vh, 100vh, 50vh
 
-  @media (min-width: 1000px)
-    background-size: 75%
+  @media $mqMiddle
+    background-size: 50vh, 70vh, 50vh
+    background-position: left 70vh, right 100px, right 170vh
 
-  @media (min-width: 1280px)
-    background-size: 60%
+  @media $mqNormal
+    background-size: 60vh, 80vh, 60vh
+    background-position: left 70vh, right 100px, right 150vh
 
 header,
 nav,
@@ -74,8 +77,9 @@ button,
   display: inline-block
   padding: emCalc(20, 18) emCalc(30, 18)
 
-  border: $blue solid
-  border-width: 0 emCalc(4, 18) emCalc(4, 18) 0
+  box-shadow: 2px 2px 3px $blue
+  border: transparent solid
+  // border-width: 0 emCalc(4, 18) emCalc(4, 18) 0
   border-radius: emCalc(4, 18)
 
   color: $mainFontColor

@@ -1,0 +1,18 @@
+.ticket
+  position: absolute
+  left: 0
+  top: 170vh
+  @media $mqSmall
+    top: 140vh
+  @media $mqMiddle
+    top: 70vh
+    text-align: left
+  & .section
+    &__title
+      margin-bottom: emCalc(26, 60)
+    &__subtitle
+      margin: emCalc(30, 18) 0 emCalc(16, 18) 0
+    &__copy
+      line-height: emCalc(34, 18)
+  .button
+    margin: emCalc(24) 0 0 0

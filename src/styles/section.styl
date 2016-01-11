@@ -1,31 +1,42 @@
 .section
   &--left, &--right, &--center
     text-align: center
-    @media $mqNormal
+    @media $mqMiddle
       width: 50%
 
   &--left
-    @media $mqNormal
+    @media $mqMiddle
       text-align: left
+      padding-left: 2vh
 
   &--right
-    @media $mqNormal
+    @media $mqMiddle
       text-align: right
       margin-left: 50%
 
 
   &--center
-    @media $mqNormal
+    @media $mqMiddle
       text-align: center
       width: 80%
       margin-left: 10%
 
   &__copy
+    text-transfrom: uppercase
     font-size: emCalc(18)
     line-height: emCalc(28, 18)
+    @media $mqMiddle
+      margin-bottom: emCalc(24, 18)
 
   &__title
     font-size: emCalc(40)
+    font-weight: 100
+    line-height: 1.5em
+    @media $mqMiddle
+      font-size: emCalc(60)
+
+  &__subtitle
+    font-size: emCalc(18)
     font-weight: 100
 
   &--strong
