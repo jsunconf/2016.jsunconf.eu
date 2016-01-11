@@ -1,21 +1,17 @@
 .navigation
-  position: fixed
-  top: 0
-  left: 0
-  width: 100%
-  background: $backgroundBeige
+  display: flex
+  justify-content: flex-end
+  margin-bottom: emCalc(15)
 
   &__list
-    display: none
+    font-size: remCalc(14)
+    display: flex
+    flex-grow: 1
+    margin-left: emCalc(160, 14)
+
+
   &__ticket-button
     display: block
-    position: absolute
-    right: 0
-    top: -6px
-    @media $mqNormal
-      display: none
-
-    &--desktop
-      display: none
-      @media $mqNormal
-        display: block
+    align-self: flex-end
+    border-top-left-radius: 0
+    border-top-right-radius: 0
