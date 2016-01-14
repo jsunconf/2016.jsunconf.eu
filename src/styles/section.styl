@@ -1,43 +1,58 @@
 .section
-  &--left, &--right, &--center
-    text-align: center
-    @media $mqMiddle
-      width: 50%
+  display: flex
+  margin-top: emCalc(200)
 
-  &--left
-    @media $mqMiddle
-      text-align: left
-      padding-left: 2vh
+  &:last-of-type
+    margin-bottom: emCalc(200)
 
-  &--right
-    @media $mqMiddle
-      text-align: right
-      margin-left: 50%
+  &--tickets
+    flex-direction: row-reverse
+    padding-left: emCalc(30)
 
+  &--date
+    justify-content: center
+    width: auto
+    flex-grow: 1
 
-  &--center
-    @media $mqMiddle
+    .section__content
+      width: auto
+
+    .section__title
       text-align: center
-      width: 80%
-      margin-left: 10%
 
-  &__copy
-    text-transfrom: uppercase
-    font-size: emCalc(18)
-    line-height: emCalc(28, 18)
-    @media $mqMiddle
-      margin-bottom: emCalc(24, 18)
+  &--coc
+    justify-content: center
+
+  &__content
+    width: 50%
 
   &__title
     font-size: emCalc(40)
+
+    margin-bottom: emCalc(20, 40)
+
     font-weight: 100
-    line-height: 1.5em
+    text-transform: uppercase
+
+    span.bold
+      font-weight: 800
+
+    span.light
+      font-weight: 100
+      text-transform: none
+
     @media $mqMiddle
       font-size: emCalc(60)
 
   &__subtitle
-    font-size: emCalc(18)
-    font-weight: 100
+    font-size: emCalc(32)
+    font-weight: 500
+    line-height: 2
 
-  &--strong
-    font-weight: 800
+  &__copy
+    text-transfrom: uppercase
+    font-size: emCalc(18)
+    line-height: 2
+
+    @media $mqMiddle
+      margin-bottom: emCalc(24, 18)

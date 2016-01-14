@@ -35,10 +35,9 @@ body
 
   padding: 0 emCalc(25px)
   background: $backgroundColor
-  background-image:  url('../images/ticket.png'),   url('../images/keyvisual.png'), url('../images/sponsor.png')
+  background-image: url('../images/ticket.png'), url('../images/keyvisual.png'), url('../images/sponsor.png')
   background-repeat: no-repeat
-  background-position: center 275vh, right 100vh, center 415vh
-  background-size: 50vh, 90vh, 50vh
+  background-position: -100px 600px, calc(100% + 50px) 120px, calc(100% + 50px) 1400px
 
   font-family: Raleway, sans-serif
   line-height: 1.2
@@ -47,17 +46,17 @@ body
 
   min-height: 100%
 
-  @media $mqSmall
-    background-position: center 195vh, right 60vh, center 290vh
-    background-size: 50vh, 100vh, 50vh
-
-  @media $mqMiddle
-    background-size: 50vh, 70vh, 50vh
-    background-position: left 70vh, right 100px, right 170vh
-
-  @media $mqNormal
-    background-size: 60vh, 80vh, 60vh
-    background-position: left 70vh, right 100px, right 150vh
+  // @media $mqSmall
+  //   background-position: center 195vh, right 60vh, center 290vh
+  //   background-size: 50vh, 100vh, 50vh
+  //
+  // @media $mqMiddle
+  //   background-size: 50vh, 70vh, 50vh
+  //   background-position: left 70vh, right 100px, right 170vh
+  //
+  // @media $mqNormal
+  //   background-size: 60vh, 80vh, 60vh
+  //   background-position: left 70vh, right 100px, right 150vh
 
 header,
 nav,
@@ -65,11 +64,26 @@ section
   max-width: emCalc(1200)
   width: 100%
 
+p
+  margin-bottom: emCalc(10)
+a
+  color: #fff
+  text-decoration: none
+  border-bottom: 1px solid #fff
+
 ul
   list-style: none
 
 li
   margin: 0
+
+dt, dd
+  display: inline
+  margin: 0
+
+dd:after
+  content: '\A'
+  white-space: pre
 
 button,
 .button
@@ -77,9 +91,9 @@ button,
   display: inline-block
   padding: emCalc(20, 18) emCalc(30, 18)
 
-  box-shadow: 2px 2px 3px $blue
+  box-shadow: 2px 2px 0px 2px $blue
   border: transparent solid
-  // border-width: 0 emCalc(4, 18) emCalc(4, 18) 0
+  border-width: 0 emCalc(4, 18) emCalc(4, 18) 0
   border-radius: emCalc(4, 18)
 
   color: $mainFontColor

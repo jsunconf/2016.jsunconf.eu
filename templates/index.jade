@@ -2,65 +2,25 @@ extends partials/layout
 
 block main
 
-  nav.navigation
-    //- ul.navigation__list
-    //-   li.navigation__list--item Tickets
-
-    button.button.navigation__ticket-button
-      | Get your €59 Early Bird Ticket soon
+  include partials/navigation
 
   header.main-header
     img.main-header__logo(src='images/jsunconflogo.svg', alt='JSUnconf')
 
     p.main-header__title
-      | 23. & 24. April , Hamburg
+      | Hamburg, 23rd & 24th of April 2016
     p.main-header__tagline
-      | This is <strong> your</strong> conference
+      | This is <span> your</span> conference
 
-  // Begin MailChimp Signup Form
-  section.mc_embed_signup
-    form#mc-embedded-subscribe-form.validate.stay-up-to-date(action='//jsunconf.us11.list-manage.com/subscribe/post?u=562adf61069508a950eb241c9&id=f013091375', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
-      #mc_embed_signup_scroll
-        .mc-field-group
-          input#mce-EMAIL.required.email(type='email', value='', name='EMAIL', placeholder='Keep me updated')
-        #mce-responses.clear
-          #mce-error-response.response(style='display:none')
-          #mce-success-response.response(style='display:none')
-        // real people should not fill this in and expect good things - do not remove this or risk form bot signups
-        div(style='position: absolute; left: -5000px;')
-          input(type='text', name='b_562adf61069508a950eb241c9_f013091375', tabindex='-1', value='')
-        .clear
-          button#mc-embedded-subscribe.button(type='submit', name='subscribe') ok
-  // End mc_embed_signup
 
-  section.section--right.ticket
-    .section__title Tickets
-    .section__copy Early Bird: €59 (December 2015),  </br> Regular: €79 (January  & February 2016) 
-    .section__subtitle.section--strong Diversity Tickets
-    .section__copy  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.   
-      | Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-      | penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-    .section__copy Donec quam felis, ultricies nec, pellentesque eu, 
-      |pretium  quis, sem. 
-      | Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
-      | nec, vulputate eget, arcu.ail.
-    .button Get your €59  Early Bird Ticket soon
-  section.section--left.sponsor
-    .section__title How To <br/> become a <br/>
-      span.section--strong Sponsor
-    .section__copy Donec pede justo, fringilla vel, aliquet nec, vulputate 
-      | eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, 
-      | justo. nteger tincidunt. Show the JS Community how awesome your company 
-      | is! Our sponsors
-    .button Sponsor away
-  //- section.section--right
-  //-   .section__title Title right
-  //-   .section__copy Lorem Ipsum Dolor zit amet.
-  //- section.section--center
-  //-   .section__title Title center
-  //-   .section__copy Lorem 
-  //-     span.section--strong Ipsum 
-  //-     |  Dolor zit amet.
+  include partials/mailchimp
+  include partials/tickets
+  //- include partials/date
+  include partials/sponsors
+  include partials/code-of-conduct
+
+
+
   script.
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
