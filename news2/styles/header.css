@@ -1,0 +1,24 @@
+.main-header {
+  font-size: 1rem;
+  width: 100%;
+  margin-bottom: emCalc(40);
+}
+.main-header__logo {
+  max-width: emCalc(160);
+  margin-bottom: emCalc(45);
+}
+.main-header__title {
+  font-size: emCalc(18);
+  font-weight: 300;
+  margin-bottom: emCalc(18, 18);
+}
+.main-header__tagline {
+  font-size: remCalc(56);
+  margin: 0;
+  max-width: emCalc(450, 56);
+  font-weight: 100;
+  text-transform: uppercase;
+}
+.main-header span {
+  font-weight: 800;
+}

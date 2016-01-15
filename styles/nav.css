@@ -1,0 +1,17 @@
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: emCalc(15);
+}
+.navigation__list {
+  font-size: remCalc(14);
+  display: flex;
+  flex-grow: 1;
+  margin-left: emCalc(160, 14);
+}
+.navigation__ticket-button {
+  display: block;
+  align-self: flex-end;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}

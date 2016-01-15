@@ -1,0 +1,35 @@
+.sponsor {
+  position: absolute;
+  left: 0;
+  padding-bottom: 500px;
+  top: 330vh;
+}
+@media $mqSmall {
+  .sponsor {
+    top: 250vh;
+  }
+}
+@media $mqMiddle {
+  .sponsor {
+    padding-bottom: 100px;
+    top: 160vh;
+    text-align: left;
+  }
+}
+@media $mqNormal {
+  .sponsor {
+    top: 150vh;
+  }
+}
+.sponsor .section__title {
+  margin-bottom: emCalc(26, 60);
+}
+.sponsor .section__subtitle {
+  margin: emCalc(30, 18) 0 emCalc(16, 18) 0;
+}
+.sponsor .section__copy {
+  line-height: emCalc(34, 18);
+}
+.sponsor .button {
+  margin: emCalc(24) 0 0 0;
+}

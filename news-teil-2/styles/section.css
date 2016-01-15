@@ -1,0 +1,61 @@
+.section {
+  display: flex;
+  margin-top: emCalc(200);
+}
+.section:last-of-type {
+  margin-bottom: emCalc(200);
+}
+.section--tickets {
+  flex-direction: row-reverse;
+  padding-left: emCalc(30);
+}
+.section--date {
+  justify-content: center;
+  width: auto;
+  flex-grow: 1;
+}
+.section--date .section__content {
+  width: auto;
+}
+.section--date .section__title {
+  text-align: center;
+}
+.section--coc {
+  justify-content: center;
+}
+.section__content {
+  width: 50%;
+}
+.section__title {
+  font-size: emCalc(40);
+  margin-bottom: emCalc(20, 40);
+  font-weight: 100;
+  text-transform: uppercase;
+}
+.section__title span.bold {
+  font-weight: 800;
+}
+.section__title span.light {
+  font-weight: 100;
+  text-transform: none;
+}
+@media $mqMiddle {
+  .section__title {
+    font-size: emCalc(60);
+  }
+}
+.section__subtitle {
+  font-size: emCalc(32);
+  font-weight: 500;
+  line-height: 2;
+}
+.section__copy {
+  text-transfrom: uppercase;
+  font-size: emCalc(18);
+  line-height: 2;
+}
+@media $mqMiddle {
+  .section__copy {
+    margin-bottom: emCalc(24, 18);
+  }
+}
