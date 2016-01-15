@@ -1,6 +1,9 @@
 .section
   display: flex
-  margin-top: emCalc(200)
+  margin-top: emCalc(350)
+
+  @media $mqSmall
+    margin-top: emCalc(200)
 
   &:last-of-type
     margin-bottom: emCalc(200)
@@ -24,7 +27,12 @@
     justify-content: center
 
   &__content
-    width: 50%
+    width: 100%
+    text-align: justify
+
+    @media $mqSmall
+      width: 50%
+      text-align: left
 
   &__title
     font-size: emCalc(40)
@@ -33,6 +41,10 @@
 
     font-weight: 100
     text-transform: uppercase
+    text-align: center
+
+    @media $mqSmall
+      text-align: left
 
     span.bold
       font-weight: 800
@@ -53,6 +65,7 @@
     text-transfrom: uppercase
     font-size: emCalc(18)
     line-height: 2
+
 
     @media $mqMiddle
       margin-bottom: emCalc(24, 18)
