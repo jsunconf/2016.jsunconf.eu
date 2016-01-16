@@ -1,6 +1,21 @@
 .section {
   display: flex;
-  margin-top: emCalc(200);
+  margin-top: emCalc(600);
+}
+@media $mqSmall {
+  .section {
+    margin-top: emCalc(600);
+  }
+}
+@media $mqMiddle {
+  .section {
+    margin-top: emCalc(100);
+  }
+}
+@media $mqNormal {
+  .section {
+    margin-top: emCalc(200);
+  }
 }
 .section:last-of-type {
   margin-bottom: emCalc(200);
@@ -24,13 +39,25 @@
   justify-content: center;
 }
 .section__content {
-  width: 50%;
+  width: 100%;
+  text-align: justify;
+}
+@media $mqMiddle {
+  .section__content {
+    width: 50%;
+  }
 }
 .section__title {
   font-size: emCalc(40);
   margin-bottom: emCalc(20, 40);
   font-weight: 100;
   text-transform: uppercase;
+  text-align: center;
+}
+@media $mqMiddle {
+  .section__title {
+    text-align: left;
+  }
 }
 .section__title span.bold {
   font-weight: 800;

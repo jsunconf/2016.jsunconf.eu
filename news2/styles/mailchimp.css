@@ -5,7 +5,11 @@
   margin: 0 auto;
   font-size: 1.5rem;
   max-width: 18.75em;
-  margin: 0;
+}
+@media $mqMiddle {
+  .stay-up-to-date {
+    margin: 0;
+  }
 }
 .stay-up-to-date input[type="email"] {
   font-weight: 300;

@@ -1,7 +1,15 @@
 .main-header {
   font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   margin-bottom: emCalc(40);
+}
+@media $mqMiddle {
+  .main-header {
+    align-items: flex-start;
+  }
 }
 .main-header__logo {
   max-width: emCalc(160);
@@ -18,6 +26,12 @@
   max-width: emCalc(450, 56);
   font-weight: 100;
   text-transform: uppercase;
+  text-align: center;
+}
+@media $mqSmall {
+  .main-header__tagline {
+    text-align: left;
+  }
 }
 .main-header span {
   font-weight: 800;

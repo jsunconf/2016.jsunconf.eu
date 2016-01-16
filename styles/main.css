@@ -27,7 +27,13 @@
 html {
   min-height: 100%;
   font-size: 100%;
+  font-size: 11px;
   tap-highlight-color: rgba(0,0,0,0);
+}
+@media (min-width: 700px) {
+  html {
+    font-size: 100%;
+  }
 }
 body {
   font-size: 1rem;
@@ -38,12 +44,36 @@ body {
   background: #bbb4b4;
   background-image: url("../images/ticket.png"), url("../images/keyvisual.png"), url("../images/sponsor.png");
   background-repeat: no-repeat;
-  background-position: -100px 600px, calc(100% + 50px) 120px, calc(100% + 50px) 1400px;
+  background-position: center 1050px, right 370px, center 1680px;
+  background-size: 60%, 80%, 60%;
   font-family: Raleway, sans-serif;
   line-height: 1.2;
   color: #fff;
   font-feature-settings: 'kern' 1;
   min-height: 100%;
+}
+@media (min-width: 700px) {
+  body {
+    background-position: center 1600px, right 550px, center 2500px;
+    background-size: 60%, 80%, 60%;
+  }
+}
+@media (min-width: 1000px) {
+  body {
+    background-size: 60%;
+  }
+}
+@media (min-width: 1000px) {
+  body {
+    background-size: 60%;
+    background-position: -100px 600px, calc(100% + 50px) 120px, calc(100% + 50px) 1400px;
+  }
+}
+@media (min-width: 1300px) {
+  body {
+    background-size: auto, auto, auto;
+    background-position: -100px 43.75em, calc(100% + 50px) 120px, calc(100% + 50px) 1400px;
+  }
 }
 header,
 nav,
@@ -89,8 +119,16 @@ button,
 }
 .main-header {
   font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   margin-bottom: 2.5em;
+}
+@media (min-width: 1000px) {
+  .main-header {
+    align-items: flex-start;
+  }
 }
 .main-header__logo {
   max-width: 10em;
@@ -107,6 +145,12 @@ button,
   max-width: 8.035714285714286em;
   font-weight: 100;
   text-transform: uppercase;
+  text-align: center;
+}
+@media (min-width: 700px) {
+  .main-header__tagline {
+    text-align: left;
+  }
 }
 .main-header span {
   font-weight: 800;
@@ -123,14 +167,34 @@ button,
   margin-left: 11.428571428571429em;
 }
 .navigation__ticket-button {
-  display: block;
+  display: none;
   align-self: flex-end;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+@media (min-width: 700px) {
+  .navigation__ticket-button {
+    display: block;
+  }
+}
 .section {
   display: flex;
-  margin-top: 12.5em;
+  margin-top: 37.5em;
+}
+@media (min-width: 700px) {
+  .section {
+    margin-top: 37.5em;
+  }
+}
+@media (min-width: 1000px) {
+  .section {
+    margin-top: 6.25em;
+  }
+}
+@media (min-width: 1300px) {
+  .section {
+    margin-top: 12.5em;
+  }
 }
 .section:last-of-type {
   margin-bottom: 12.5em;
@@ -154,13 +218,25 @@ button,
   justify-content: center;
 }
 .section__content {
-  width: 50%;
+  width: 100%;
+  text-align: justify;
+}
+@media (min-width: 1000px) {
+  .section__content {
+    width: 50%;
+  }
 }
 .section__title {
   font-size: 2.5em;
   margin-bottom: 0.5em;
   font-weight: 100;
   text-transform: uppercase;
+  text-align: center;
+}
+@media (min-width: 1000px) {
+  .section__title {
+    text-align: left;
+  }
 }
 .section__title span.bold {
   font-weight: 800;
@@ -196,7 +272,11 @@ button,
   margin: 0 auto;
   font-size: 1.5rem;
   max-width: 18.75em;
-  margin: 0;
+}
+@media (min-width: 1000px) {
+  .stay-up-to-date {
+    margin: 0;
+  }
 }
 .stay-up-to-date input[type="email"] {
   font-weight: 300;
@@ -270,7 +350,7 @@ button,
     text-align: left;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1300px) {
   .sponsor {
     top: 150vh;
   }

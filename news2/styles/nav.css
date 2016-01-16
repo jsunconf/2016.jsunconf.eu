@@ -10,8 +10,13 @@
   margin-left: emCalc(160, 14);
 }
 .navigation__ticket-button {
-  display: block;
+  display: none;
   align-self: flex-end;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+@media $mqSmall {
+  .navigation__ticket-button {
+    display: block;
+  }
 }
