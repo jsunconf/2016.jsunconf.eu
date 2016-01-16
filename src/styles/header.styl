@@ -1,7 +1,14 @@
 .main-header
   font-size: 1rem
+  display: flex
+  flex-direction: column
+  align-items: center
+
   width: 100%
   margin-bottom: emCalc(40)
+
+  @media $mqMiddle
+    align-items: flex-start
 
   &__logo
     max-width: emCalc(160)
@@ -21,6 +28,10 @@
 
     font-weight: 100
     text-transform: uppercase
+    text-align: center
+
+    @media $mqSmall
+      text-align: left
 
   span
     font-weight: 800

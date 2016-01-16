@@ -24,7 +24,11 @@
 html
   min-height: 100%
   font-size: 100%
+  font-size: 11px
   tap-highlight-color: rgba(0, 0, 0, 0)
+
+  @media $mqSmall
+    font-size: 100%
 
 body
   font-size: 1rem
@@ -37,7 +41,8 @@ body
   background: $backgroundColor
   background-image: url('../images/ticket.png'), url('../images/keyvisual.png'), url('../images/sponsor.png')
   background-repeat: no-repeat
-  background-position: -100px 600px, calc(100% + 50px) 120px, calc(100% + 50px) 1400px
+  background-position: center 1050px, right 370px, center 1680px
+  background-size: 60%, 80%, 60%
 
   font-family: Raleway, sans-serif
   line-height: 1.2
@@ -46,17 +51,20 @@ body
 
   min-height: 100%
 
-  // @media $mqSmall
-  //   background-position: center 195vh, right 60vh, center 290vh
-  //   background-size: 50vh, 100vh, 50vh
-  //
-  // @media $mqMiddle
-  //   background-size: 50vh, 70vh, 50vh
-  //   background-position: left 70vh, right 100px, right 170vh
-  //
-  // @media $mqNormal
-  //   background-size: 60vh, 80vh, 60vh
-  //   background-position: left 70vh, right 100px, right 150vh
+  @media $mqSmall
+    background-position: center 1600px, right 550px, center 2500px
+    background-size: 60%, 80%, 60%
+
+  @media $mqMiddle
+    background-size: 60%
+
+  @media $mqMiddle
+    background-size: 60%
+    background-position: -100px 600px, calc(100% + 50px) 120px, calc(100% + 50px) 1400px
+
+  @media $mqNormal
+    background-size: auto, auto, auto
+    background-position: -100px emCalc(700px), calc(100% + 50px) 120px, calc(100% + 50px) 1400px
 
 header,
 nav,
