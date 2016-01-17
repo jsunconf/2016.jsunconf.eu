@@ -6,8 +6,9 @@
   font-size: 1.5rem;
   max-width: 18.75em;
 }
-@media $mqMiddle {
+@media $mediaQueryBig {
   .stay-up-to-date {
+    align-self: flex-start;
     margin: 0;
   }
 }

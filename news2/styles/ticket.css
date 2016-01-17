@@ -1,3 +1,27 @@
+.tickets {
+  position: relative;
+  flex-direction: row-reverse;
+}
+.tickets:before {
+  content: '';
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 100%;
+  height: emCalc(500);
+  background-image: url("../images/ticket.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+@media $mediaQueryBig {
+  .tickets:before {
+    top: 0;
+    height: 100%;
+    width: 50%;
+  }
+}
 .tickets__prices span {
   font-weight: 600;
 }

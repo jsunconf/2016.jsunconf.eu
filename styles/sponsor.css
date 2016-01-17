@@ -1,35 +1,29 @@
 .sponsor {
+  font-size: 1rem;
+  position: relative;
+  margin-top: emCalc(500);
+}
+@media $mediaQueryBig {
+  .sponsor {
+    margin-top: emCalc(80);
+  }
+}
+.sponsor:before {
+  content: '';
   position: absolute;
-  left: 0;
-  padding-bottom: 500px;
-  top: 330vh;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/sponsor.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
 }
-@media $mqSmall {
-  .sponsor {
-    top: 250vh;
+@media $mediaQueryBig {
+  .sponsor:before {
+    top: 0;
+    right: 0;
+    width: 50%;
   }
-}
-@media $mqMiddle {
-  .sponsor {
-    padding-bottom: 100px;
-    top: 160vh;
-    text-align: left;
-  }
-}
-@media $mqNormal {
-  .sponsor {
-    top: 150vh;
-  }
-}
-.sponsor .section__title {
-  margin-bottom: emCalc(26, 60);
-}
-.sponsor .section__subtitle {
-  margin: emCalc(30, 18) 0 emCalc(16, 18) 0;
-}
-.sponsor .section__copy {
-  line-height: emCalc(34, 18);
-}
-.sponsor .button {
-  margin: emCalc(24) 0 0 0;
 }

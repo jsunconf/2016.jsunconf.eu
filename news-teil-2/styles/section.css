@@ -1,28 +1,15 @@
 .section {
+  font-size: 1rem;
   display: flex;
-  margin-top: emCalc(600);
+  margin-top: emCalc(400);
 }
-@media $mqSmall {
-  .section {
-    margin-top: emCalc(600);
-  }
-}
-@media $mqMiddle {
+@media $mediaQueryBig {
   .section {
     margin-top: emCalc(100);
   }
 }
-@media $mqNormal {
-  .section {
-    margin-top: emCalc(200);
-  }
-}
 .section:last-of-type {
   margin-bottom: emCalc(200);
-}
-.section--tickets {
-  flex-direction: row-reverse;
-  padding-left: emCalc(30);
 }
 .section--date {
   justify-content: center;
@@ -40,33 +27,44 @@
 }
 .section__content {
   width: 100%;
-  text-align: justify;
+  text-align: center;
 }
-@media $mqMiddle {
+@media $mediaQuerySmall {
+  .section__content {
+    text-align: left;
+  }
+}
+@media $mediaQueryBig {
   .section__content {
     width: 50%;
   }
 }
 .section__title {
-  font-size: emCalc(40);
+  font-size: emCalc(40, 11);
   margin-bottom: emCalc(20, 40);
   font-weight: 100;
   text-transform: uppercase;
   text-align: center;
 }
-@media $mqMiddle {
+@media $mediaQuerySmall {
   .section__title {
-    text-align: left;
+    font-size: emCalc(40);
   }
 }
-.section__title span.bold {
+@media $mediaQueryBig {
+  .section__title {
+    text-align: left;
+    font-size: emCalc(40);
+  }
+}
+.section__title .bold {
   font-weight: 800;
 }
-.section__title span.light {
+.section__title .light {
   font-weight: 100;
   text-transform: none;
 }
-@media $mqMiddle {
+@media $mediaQuerySmall {
   .section__title {
     font-size: emCalc(60);
   }
@@ -77,12 +75,13 @@
   line-height: 2;
 }
 .section__copy {
-  text-transfrom: uppercase;
-  font-size: emCalc(18);
-  line-height: 2;
+  font-size: emCalc(24);
+  line-height: 1.6;
 }
-@media $mqMiddle {
+@media $mediaQuerySmall {
   .section__copy {
+    font-size: emCalc(18);
+    line-height: 2;
     margin-bottom: emCalc(24, 18);
   }
 }
