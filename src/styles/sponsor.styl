@@ -1,23 +1,28 @@
 .sponsor
-  position: absolute
-  left: 0
-  padding-bottom: 500px
-  top: 330vh
+  font-size: 1rem
+  position: relative
+  margin-top: emCalc(500)
 
-  @media $mqSmall
-    top: 250vh
-  @media $mqMiddle
-    padding-bottom: 100px
-    top: 160vh
-    text-align: left
-  @media $mqNormal
-    top: 150vh
-  & .section
-    &__title
-      margin-bottom: emCalc(26, 60)
-    &__subtitle
-      margin: emCalc(30, 18) 0 emCalc(16, 18) 0
-    &__copy
-      line-height: emCalc(34, 18)
-  .button
-    margin: emCalc(24) 0 0 0
+  @media $mediaQueryBig
+    margin-top: emCalc(80)
+
+  &:before
+    content: ''
+
+    position: absolute
+    top: 100%
+
+    width: 100%
+    height: 100%
+
+    background-image: url('../images/sponsor.jpg')
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+
+    z-index: -1
+
+    @media $mediaQueryBig
+      top: 0
+      right: 0
+      width: 50%
