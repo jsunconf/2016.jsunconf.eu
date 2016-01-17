@@ -1,23 +1,14 @@
 .section
+  font-size: 1rem
   display: flex
 
-  margin-top: emCalc(600)
+  margin-top: emCalc(400)
 
-  @media $mqSmall
-    margin-top: emCalc(600)
-
-  @media $mqMiddle
+  @media $mediaQueryBig
     margin-top: emCalc(100)
-
-  @media $mqNormal
-    margin-top: emCalc(200)
 
   &:last-of-type
     margin-bottom: emCalc(200)
-
-  &--tickets
-    flex-direction: row-reverse
-    padding-left: emCalc(30)
 
   &--date
     justify-content: center
@@ -35,13 +26,16 @@
 
   &__content
     width: 100%
-    text-align: justify
+    text-align: center
 
-    @media $mqMiddle
+    @media $mediaQuerySmall
+      text-align: left
+
+    @media $mediaQueryBig
       width: 50%
 
   &__title
-    font-size: emCalc(40)
+    font-size: emCalc(40, 11)
 
     margin-bottom: emCalc(20, 40)
 
@@ -49,17 +43,21 @@
     text-transform: uppercase
     text-align: center
 
-    @media $mqMiddle
-      text-align: left
+    @media $mediaQuerySmall
+      font-size: emCalc(40)
 
-    span.bold
+    @media $mediaQueryBig
+      text-align: left
+      font-size: emCalc(40)
+
+    .bold
       font-weight: 800
 
-    span.light
+    .light
       font-weight: 100
       text-transform: none
 
-    @media $mqMiddle
+    @media $mediaQuerySmall
       font-size: emCalc(60)
 
   &__subtitle
@@ -68,10 +66,10 @@
     line-height: 2
 
   &__copy
-    text-transfrom: uppercase
-    font-size: emCalc(18)
-    line-height: 2
+    font-size: emCalc(24)
+    line-height: 1.6
 
-
-    @media $mqMiddle
+    @media $mediaQuerySmall
+      font-size: emCalc(18)
+      line-height: 2
       margin-bottom: emCalc(24, 18)
