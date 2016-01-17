@@ -27,7 +27,7 @@ html
   font-size: 11px
   tap-highlight-color: rgba(0, 0, 0, 0)
 
-  @media $mqSmall
+  @media $mediaQuerySmall
     font-size: 100%
 
 body
@@ -39,32 +39,12 @@ body
 
   padding: 0 emCalc(25px)
   background: $backgroundColor
-  background-image: url('../images/ticket.jpg'), url('../images/keyvisual.jpg'), url('../images/sponsor.jpg')
-  background-repeat: no-repeat
-  background-position: center 1050px, right 370px, center 1680px
-  background-size: 60%, 80%, 60%
-
   font-family: Raleway, sans-serif
-  line-height: 1.2
   color: $mainFontColor
+  line-height: 1.2
   font-feature-settings: 'kern' 1
 
   min-height: 100%
-
-  @media $mqSmall
-    background-position: center 1600px, right 550px, center 2500px
-    background-size: 60%, 80%, 60%
-
-  @media $mqMiddle
-    background-size: 60%
-
-  @media $mqMiddle
-    background-size: 60%
-    background-position: -100px 600px, calc(100% + 50px) 120px, calc(100% + 50px) 1400px
-
-  @media $mqNormal
-    background-size: auto, auto, auto
-    background-position: -100px emCalc(700px), calc(100% + 50px) 120px, calc(100% + 50px) 1400px
 
 header,
 nav,
@@ -95,7 +75,7 @@ dd:after
 
 button,
 .button
-  font-size: remCalc(18)
+  font-size: remCalc(22)
   display: inline-block
   padding: emCalc(20, 18) emCalc(30, 18)
 
@@ -108,3 +88,6 @@ button,
   letter-spacing: .5px
 
   background: $lighterBlue
+
+  @media $mediaQuerySmall
+    font-size: remCalc(18)
