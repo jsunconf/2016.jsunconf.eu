@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:800,300,100");
+@import url("https://fonts.googleapis.com/css?family=Raleway:800,400,300,100");
 *,
 *:before,
 *:after {
@@ -47,6 +47,7 @@ body {
   line-height: 1.2;
   font-feature-settings: 'kern' 1;
   min-height: 100%;
+  overflow-x: hidden;
 }
 header,
 nav,
@@ -60,7 +61,16 @@ p {
 a {
   color: #fff;
   text-decoration: none;
-  border-bottom: 1px solid #fff;
+  font-weight: 800;
+  padding: 0.2em;
+  border: 1px solid transparent;
+  border-bottom-color: #fff;
+  transition: border 0.25s ease-in-out;
+}
+a:hover,
+a:focus {
+  border-color: #fff;
+  border-color: rgba(255,255,255,0.5);
 }
 ul {
   list-style: none;
@@ -89,6 +99,14 @@ button,
   color: #fff;
   letter-spacing: 0.5px;
   background: #0069b4;
+  transition: background-color 0.15s ease-in-out;
+}
+button:hover,
+.button:hover,
+button:focus,
+.button:focus {
+  border-color: transparent;
+  background-color: #004b9f;
 }
 @media (min-width: 600px) {
   button,
@@ -104,6 +122,11 @@ button,
   align-items: center;
   width: 100%;
   margin-bottom: 2.5em;
+}
+@media (min-width: 600px) {
+  .main-header {
+    margin-top: -4.0625em;
+  }
 }
 @media (min-width: 900px) {
   .main-header {
@@ -132,8 +155,9 @@ button,
 }
 @media (min-width: 900px) {
   .main-header:before {
-    top: 0;
+    top: 4.375em;
     right: calc(-100% - 30px);
+    height: 47.5em;
   }
 }
 .main-header__logo {
@@ -166,6 +190,14 @@ button,
 .main-header span {
   font-weight: 800;
 }
+.main-footer {
+  font-size: 1rem;
+  margin: 5em 0 10em 0;
+}
+.main-footer__link img {
+  vertical-align: bottom;
+  margin-right: 0.2em;
+}
 .navigation {
   display: flex;
   justify-content: flex-end;
@@ -183,6 +215,11 @@ button,
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+@media (min-width: 600px) {
+  .navigation__ticket-button {
+    display: block;
+  }
+}
 .section {
   font-size: 1rem;
   display: flex;
@@ -192,9 +229,6 @@ button,
   .section {
     margin-top: 6.25em;
   }
-}
-.section:last-of-type {
-  margin-bottom: 12.5em;
 }
 .section--date {
   justify-content: center;
@@ -256,7 +290,7 @@ button,
 }
 .section__subtitle {
   font-size: 2em;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 2;
 }
 .section__copy {
@@ -360,7 +394,7 @@ button,
   }
 }
 .tickets__prices span {
-  font-weight: 600;
+  font-weight: 800;
 }
 .sponsor {
   font-size: 1rem;

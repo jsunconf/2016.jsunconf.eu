@@ -7,6 +7,11 @@
   width: 100%;
   margin-bottom: emCalc(40);
 }
+@media $mediaQuerySmall {
+  .main-header {
+    margin-top: emCalc(-65);
+  }
+}
 @media $mediaQueryBig {
   .main-header {
     width: 50%;
@@ -34,8 +39,9 @@
 }
 @media $mediaQueryBig {
   .main-header:before {
-    top: 0;
+    top: emCalc(70);
     right: calc(-100% - 30px);
+    height: emCalc(760px);
   }
 }
 .main-header__logo {

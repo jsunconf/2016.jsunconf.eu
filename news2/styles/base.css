@@ -46,6 +46,7 @@ body {
   line-height: 1.2;
   font-feature-settings: 'kern' 1;
   min-height: 100%;
+  overflow-x: hidden;
 }
 header,
 nav,
@@ -59,7 +60,16 @@ p {
 a {
   color: $mainFontColor;
   text-decoration: none;
-  border-bottom: 1px solid #fff;
+  font-weight: 800;
+  padding: 0.2em;
+  border: 1px solid transparent;
+  border-bottom-color: #fff;
+  transition: border 0.25s ease-in-out;
+}
+a:hover,
+a:focus {
+  border-color: #fff;
+  border-color: rgba(255,255,255,0.5);
 }
 ul {
   list-style: none;
@@ -88,6 +98,14 @@ button,
   color: $mainFontColor;
   letter-spacing: 0.5px;
   background: $lighterBlue;
+  transition: background-color 0.15s ease-in-out;
+}
+button:hover,
+.button:hover,
+button:focus,
+.button:focus {
+  border-color: transparent;
+  background-color: $blue;
 }
 @media $mediaQuerySmall {
   button,
