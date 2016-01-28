@@ -46,6 +46,8 @@ body
 
   min-height: 100%
 
+  overflow-x: hidden
+
 header,
 nav,
 section
@@ -57,7 +59,15 @@ p
 a
   color: $mainFontColor
   text-decoration: none
-  border-bottom: 1px solid #fff
+  font-weight: 800
+  padding: .2em
+  border: 1px solid transparent
+  border-bottom-color: #fff
+  transition: border .25s ease-in-out
+
+  &:hover, &:focus
+    border-color: #fff
+    border-color: rgba(255, 255, 255, 0.5)
 
 ul
   list-style: none
@@ -88,6 +98,12 @@ button,
   letter-spacing: .5px
 
   background: $lighterBlue
+
+  transition: background-color .15s ease-in-out
+
+  &:hover, &:focus
+    border-color: transparent
+    background-color: $blue
 
   @media $mediaQuerySmall
     font-size: remCalc(18)

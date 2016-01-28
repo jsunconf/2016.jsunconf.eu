@@ -9,6 +9,9 @@
   width: 100%
   margin-bottom: emCalc(40)
 
+  @media $mediaQuerySmall
+    margin-top: emCalc(-65)
+
   @media $mediaQueryBig
     width: 50%
     align-self: flex-start
@@ -35,8 +38,9 @@
       top: calc(100% + 50px)
 
     @media $mediaQueryBig
-      top: 0
+      top: emCalc(70)
       right: calc(-100% - 30px)
+      height: emCalc(760px)
 
   &__logo
     max-width: emCalc(160)
