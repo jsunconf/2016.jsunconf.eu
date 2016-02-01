@@ -11,6 +11,10 @@
     justify-content: center
     width: auto
     flex-grow: 1
+    margin-top: emCalc(500)
+
+    @media $mediaQueryBig
+      margin-top: emCalc(80)
 
     .section__content
       width: auto
@@ -20,6 +24,7 @@
 
   &--coc
     justify-content: center
+    margin-top: emCalc(100)
 
   &__content
     width: 100%
@@ -29,7 +34,7 @@
       text-align: left
 
     @media $mediaQueryBig
-      width: 50%
+      width: 48%
 
   &__title
     font-size: emCalc(40, 11)
