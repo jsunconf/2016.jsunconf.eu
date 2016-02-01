@@ -12,6 +12,12 @@
   justify-content: center;
   width: auto;
   flex-grow: 1;
+  margin-top: emCalc(500);
+}
+@media $mediaQueryBig {
+  .section--date {
+    margin-top: emCalc(80);
+  }
 }
 .section--date .section__content {
   width: auto;
@@ -21,6 +27,7 @@
 }
 .section--coc {
   justify-content: center;
+  margin-top: emCalc(100);
 }
 .section__content {
   width: 100%;
@@ -33,7 +40,7 @@
 }
 @media $mediaQueryBig {
   .section__content {
-    width: 50%;
+    width: 48%;
   }
 }
 .section__title {

@@ -71,6 +71,9 @@ a:focus {
   border-color: #fff;
   border-color: rgba(255,255,255,0.5);
 }
+img {
+  max-width: 100%;
+}
 ul {
   list-style: none;
 }

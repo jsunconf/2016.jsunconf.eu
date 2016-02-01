@@ -30,6 +30,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png"/>
     <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" rel="stylesheet" type="text/css"/>
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.12.4/mapbox-gl.css" rel="stylesheet" type="text/css"/>
     <link href="styles/main.css" rel="stylesheet" type="text/css"/>
   </head>
   <body>
@@ -73,12 +74,38 @@
           </dl>
         </div>
         <div class="section__copy">
-          <p>The first batch of Regular Tickets will go on sale for only €79 on: Sunday, 31st Jan 2016, 6pm CET. Act fast: The tickets are limited and sold out quickly last time.</p>
+          <p>The next batch of Regular Tickets will go on sale for only €79 on: Sunday, 14st February 2016, 6pm CET.</p>
         </div>
         <div class="section__subtitle section--strong">Diversity Tickets</div>
         <div class="section__copy">
           <p>We welcome applicants from underrepresented groups in tech to apply. This includes, but is not limited to: women, people of color, LGBTQIA people, disabled people, and people facing economic or political hardships. We expect that we will receive more applicants than we can support financially. Grantees will be chosen on the basis of economic need and interest in the JavaScript community. Scholarship recipients will receive a JSUnconf 2016 ticket plus a €300 travel and accomodation stipend. The deadline is March 13th. Applicants will be notified by March 20th. Interested applicants can apply for the Diversity Scholarship <a href="http://goo.gl/forms/Rlw5AQRN8y">here</a>.</p>
         </div><a href="https://ti.to/jsunconf/jsunconf-2016" class="button">Buy your ticket</a>
+      </div>
+    </section>
+    <section class="section section--date">
+      <div class="section__content">
+        <div class="section__title">
+          <span class="bold">23</span><span class="light">rd</span> & <span class="bold">24</span><span class="light">th</span> of April <br>
+          Hamburg
+        </div>
+        <div class="section__copy"> 
+          <p>Like in the last years, JSUnconf will take place in the center of Hamburg. More details on the location soon! </p>
+        </div>
+        <div class="map">
+          <div id="map-canvas" class="map__canvas"></div>
+        </div>
+        <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.12.4/mapbox-gl.js"></script>
+        <script>
+          mapboxgl.accessToken = 'pk.eyJ1IjoianN1bmNvbmYiLCJhIjoiY2lqdTV3cjNwMDAxYnU5bTRnNzg3cWU0byJ9.tRs9vvtTl1JpoRUzqTbGaQ';
+          
+          var map = new mapboxgl.Map({
+            container: 'map-canvas',
+            style: 'mapbox://styles/jsunconf/ciju5ysiq00fvbpm373dkh84x',
+            center: [9.96, 53.56],
+            zoom: 12,
+            interactive: false
+          });
+        </script>
       </div>
     </section>
     <section class="section section--sponsors sponsor">
@@ -92,6 +119,15 @@
           </p>
         </div><a href="mailto:sponsoring@jsunconf.eu?subject=Sponsoring the JSUnconf 2016" class="button">Send us an email</a>
       </div>
+    </section>
+    <section class="section section--awesome awesome">
+      <div class="section__content">
+        <div class="section__title awesome__title">What makes an<b> Unconf</b> so awesome?</div>
+        <div class="section__copy">
+          <p>You! Everybody can propose a talk. Everybody votes for the talks they want to see. The most voted talks will be held. You decide what will happen!</p>
+        </div>
+      </div>
+      <div class="section__content"><img src="/images/voting.jpg" class="section__image"/></div>
     </section>
     <section id="code-of-conduct" class="section section--coc">
       <div class="section__content">

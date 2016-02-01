@@ -72,6 +72,9 @@ a:focus {
   border-color: #fff;
   border-color: rgba(255,255,255,0.5);
 }
+img {
+  max-width: 100%;
+}
 ul {
   list-style: none;
 }
@@ -234,6 +237,12 @@ button:focus,
   justify-content: center;
   width: auto;
   flex-grow: 1;
+  margin-top: 31.25em;
+}
+@media (min-width: 900px) {
+  .section--date {
+    margin-top: 5em;
+  }
 }
 .section--date .section__content {
   width: auto;
@@ -243,6 +252,7 @@ button:focus,
 }
 .section--coc {
   justify-content: center;
+  margin-top: 6.25em;
 }
 .section__content {
   width: 100%;
@@ -255,7 +265,7 @@ button:focus,
 }
 @media (min-width: 900px) {
   .section__content {
-    width: 50%;
+    width: 48%;
   }
 }
 .section__title {
@@ -369,6 +379,10 @@ button:focus,
   transform: translateX(0.2em);
   transform: translateX(0.2em);
 }
+.stay-up-to-date button:hover,
+.stay-up-to-date button:focus {
+  background-color: transparent;
+}
 .tickets {
   position: relative;
   flex-direction: row-reverse;
@@ -396,15 +410,24 @@ button:focus,
 .tickets__prices span {
   font-weight: 800;
 }
+.awesome {
+  position: relative;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (min-width: 900px) {
+  .awesome {
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+  }
+}
+.awesome__title {
+  text-align: right;
+}
 .sponsor {
   font-size: 1rem;
   position: relative;
-  margin-top: 31.25em;
-}
-@media (min-width: 900px) {
-  .sponsor {
-    margin-top: 5em;
-  }
+  margin-top: 5em;
 }
 .sponsor:before {
   content: '';
@@ -424,4 +447,16 @@ button:focus,
     right: 0;
     width: 50%;
   }
+}
+.map {
+  font-size: 1rem;
+  position: relative;
+  padding-bottom: 400px;
+}
+.map__canvas {
+  height: 400px;
+  width: 100vw;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }

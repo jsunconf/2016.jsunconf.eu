@@ -1,0 +1,14 @@
+.awesome {
+  position: relative;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media $mediaQueryBig {
+  .awesome {
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+  }
+}
+.awesome__title {
+  text-align: right;
+}
