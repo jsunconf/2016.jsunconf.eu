@@ -7,7 +7,7 @@
   "plugins": {
     "metalsmith-markdown": {},
     "metalsmith-permalinks": {
-      "pattern": ":title"
+      "pattern": ":url"
     },
     "metalsmith-templates": {
       "engine": "jade",
