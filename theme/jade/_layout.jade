@@ -37,7 +37,16 @@ html
 
     link(href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css' rel='stylesheet' type='text/css')
     link(href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.12.4/mapbox-gl.css' rel='stylesheet' type='text/css')
-    link(href='styles/main.css' rel='stylesheet' type='text/css')
+    link(href='/styles/main.css' rel='stylesheet' type='text/css')
 
   body
+    include _navigation
     block main
+
+    footer.main-footer
+      a.main-footer__link(href='https://twitter.com/jsunconf' title='Follow us on Twitter', target='_blank')
+        img(src='images/twitter.svg', alt='')
+        | Follow us on Twitter
+
+    block scripts
+    include _scripts.jade

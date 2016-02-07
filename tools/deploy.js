@@ -7,6 +7,6 @@ ghpages.publish(path.resolve(__dirname, '../build'), {
   repo: 'https://' + process.env.GH_TOKEN +
     '@github.com/jsunconf/2016.jsunconf.eu.git',
   silent: true
-}, function(error){
+}, function(error) {
   console.log(error);
 });
