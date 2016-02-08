@@ -15,7 +15,7 @@ npm install
 Start the preview server:
 
 ```bash
-npm run dev
+npm start
 ```
 
 ## Build
