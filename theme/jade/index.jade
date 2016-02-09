@@ -10,6 +10,10 @@ block main
   include index-partials/awesome
   include index-partials/code-of-conduct
 
-  if sponsors && sponsors.length > 0
-    each sponsor in sponsors
-      //- img(src="/images/sponsors/"+sponsor.image, alt=sponsor.name)
+  each level in ['Gold', 'Silver', 'Bronze']
+    - var levelSponsors = sponsors.filter(sponsor => sponsor.level === level);
+
+    if levelSponsors && levelSponsors.length > 0
+      h4= level
+      each sponsor in levelSponsors
+        img(src="/images/sponsors/"+sponsor.image, alt=sponsor.name)
