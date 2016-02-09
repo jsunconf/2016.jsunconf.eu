@@ -9,3 +9,7 @@ block main
   include index-partials/sponsors
   include index-partials/awesome
   include index-partials/code-of-conduct
+
+  if sponsors && sponsors.length > 0
+    each sponsor in sponsors
+      //- img(src="/images/sponsors/"+sponsor.image, alt=sponsor.name)

@@ -5,13 +5,16 @@
   },
   "source": "content",
   "plugins": {
-    "metalsmith-markdown": {},
-    "metalsmith-permalinks": {
-      "pattern": ":title"
+    "metalsmith-metadata": {
+      "sponsors": "sponsors.yaml"
     },
+    "metalsmith-markdown": {},
     "metalsmith-templates": {
       "engine": "jade",
       "directory": "theme/jade"
+    },
+    "metalsmith-permalinks": {
+      "pattern": ":title"
     },
     "metalsmith-assets": {
       "source": "./theme/assets",
