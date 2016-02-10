@@ -86,6 +86,32 @@ dd:after
   content: '\A'
   white-space: pre
 
+h2
+  font-size: remCalc(40, 11)
+  margin-bottom: emCalc(20, 40)
+  font-weight: 100
+  text-transform: uppercase
+  text-align: center
+
+  @media $mediaQuerySmall
+    font-size: remCalc(60)
+
+  @media $mediaQueryBig
+    text-align: left
+    font-size: remCalc(40)
+
+h3
+  font-size: remCalc(32)
+  font-weight: 400
+  line-height: 2
+
+.bold
+  font-weight: 800
+
+.light
+  font-weight: 100
+  text-transform: none
+
 button,
 .button
   font-size: remCalc(22)
