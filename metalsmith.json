@@ -5,6 +5,9 @@
   },
   "source": "content",
   "plugins": {
+    "metalsmith-metadata": {
+      "sponsors": "sponsors.yaml"
+    },
     "metalsmith-markdown": {},
     "metalsmith-permalinks": {
       "pattern": ":url"

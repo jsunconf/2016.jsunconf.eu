@@ -1,0 +1,15 @@
+section.section.section--sponsors.sponsors
+  .section__content.section__content--full-width
+    h2.sponsors__title
+      | Awesome companies
+
+    each level in ['Gold', 'Silver', 'Bronze']
+      - var levelSponsors = sponsors.filter(sponsor => sponsor.level === level);
+
+      if levelSponsors && levelSponsors.length > 0
+        .sponsors__level
+          h4.sponsors__level__name= level
+          .sponsors__level__logos
+            each sponsor in levelSponsors
+              a.sponsors__level__logos__link(href=sponsor.url, title=sponsor.name, target="_blank", class="sponsors__level__logos__link--"+level)
+                img(src="/images/sponsors/"+sponsor.image, alt=sponsor.name)
