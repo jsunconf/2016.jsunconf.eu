@@ -1,6 +1,10 @@
 .tickets
   position: relative
   flex-direction: row-reverse
+  margin-bottom: emCalc(500)
+
+  @media $mediaQueryBig
+    margin-bottom: emCalc(80)
 
   &:before
     content: ''
@@ -22,7 +26,3 @@
       top: 0
       height: 100%
       width: 50%
-
-  &__prices
-    & span
-      font-weight: 800
