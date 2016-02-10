@@ -51,5 +51,29 @@
   level: Bronze
   url: "http://akra.de/"
   twitter: "@AKRA_Hamburg"
-  image: akra.png
+  image: akra.svg
   description: "AKRA GmbH ist ein Hamburger IT-Dienstleister mit dem Schwerpunkt Softwareentwicklung. Von etablierten norddeutschen Unternehmen bis Hamburger Start-ups: die rund 70 AKRA-Spezialisten entwickeln professionelle und individuelle IT-Lösungen. AKRA ist besonders auf die Umsetzung von komplexen Softwareapplikationen im Umfeld von Java/JEE, Ruby on Rails, JavaScript, Web-Services und Web-Portalen spezialisiert. AKRA baut auf jahrelange Projekterfahrung und hat dabei stets die effizienten Innovationen des IT-Sektors im Blick. Als offizieller Training Partner von Docker veranstaltet AKRA zertifizierte Docker-Trainings und -Coachings."
+
+-
+  name: "Silpion"
+  level: Bronze
+  url: "http://www.silpion.de/"
+  twitter: "@silpion_de"
+  image: silpion.svg
+  description: "Silpion ist der Dienstleister für die digitale Welt von heute und morgen. Wir liefern passgenaue Lösungen für Ihr Unternehmen, für Ihre Mitarbeiter und für Ihre Kunden. Von der Strategie bis zur technologisch exzellenten Umsetzung."
+
+-
+  name: "trivago"
+  level: Gold
+  url: "http://www.trivago.com/jobs"
+  twitter: "@trivago"
+  image: trivago.svg
+  description: "trivago is the world's largest hotel search website, with over 700,000 hotels, 220 partner websites and 75 million monthly visitors. We are an international IT company constantly implementing the newest technology. Over 120 IT specialists are currently working on the continuous development of the high-traffic metasearch engine at the company's headquarters in Dusseldorf."
+
+-
+  name: "Ubilabs"
+  level: Silver
+  url: "http://www.ubilabs.net/"
+  twitter: "@ubilabs"
+  image: ubilabs.svg
+  description: "Ubilabs is a software company based in Hamburg and San Francisco. With around 30 specialists – developers, concept developers, project managers and designers – we realize projects for renowned customers in Europe and the United States."
