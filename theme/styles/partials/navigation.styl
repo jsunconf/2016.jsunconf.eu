@@ -1,18 +1,27 @@
 .navigation
+  font-size: remCalc(16, 11)
   display: flex
   justify-content: flex-end
   margin-bottom: emCalc(15)
+  min-height: emCalc(50)
+
+  @media $mediaQuerySmall
+    font-size: 1rem
 
   &__list
-    font-size: remCalc(14)
     display: flex
     flex-grow: 1
-    margin-left: emCalc(160, 14)
+    align-items: center
+    justify-content: center
+
+    &__item a
+      border: none
 
   &__ticket-button
     display: none
     align-self: flex-end
     border-top-left-radius: 0
     border-top-right-radius: 0
+
     @media $mediaQuerySmall
       display: block
