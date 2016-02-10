@@ -8,11 +8,3 @@ block main
   include index-partials/sponsoring
   include index-partials/awesome
   include index-partials/code-of-conduct
-
-  each level in ['Gold', 'Silver', 'Bronze']
-    - var levelSponsors = sponsors.filter(sponsor => sponsor.level === level);
-
-    if levelSponsors && levelSponsors.length > 0
-      h4= level
-      each sponsor in levelSponsors
-        img(src="/images/sponsors/"+sponsor.image, alt=sponsor.name)

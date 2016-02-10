@@ -43,10 +43,13 @@ html
     include _navigation
     block main
 
+    block sponsors
+      include _sponsors
+
     footer.main-footer
       a.main-footer__link(href='https://twitter.com/jsunconf' title='Follow us on Twitter', target='_blank')
         img(src='images/twitter.svg', alt='')
         | Follow us on Twitter
 
     block scripts
-    include _scripts.jade
+    include _scripts
