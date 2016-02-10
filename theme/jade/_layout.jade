@@ -1,0 +1,55 @@
+html
+  head
+
+    meta( charset='utf-8')
+    title JSUnconf 2016
+
+    meta(name="description" content="JavaScript Unconference 2016 in Hamburg. It's your conference. You decide what will happen.")
+    meta(name="keywords" content="2016, javascript, unconference, conference, hamburg, javascript unconference, js, js unconf")
+
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="HandheldFriendly" content="True")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    meta(property="og:site_name" content="JSUnconf 2016")
+    meta(property="og:title" content="JSUnconf 2016")
+    meta(property="og:url" content="http://2016.jsunconf.eu")
+    meta(property="og:type" content="website")
+    meta(property="og:locale" content="en_US")
+    meta(property="og:description" content="JavaScript Unconference 2016 in Hamburg. It's your conference. You decide what will happen.")
+    meta(property="og:image" content="http://2016.jsunconf.eu/jsunconf-share.jpg")
+    meta(property="og:image:width" content="865")
+    meta(property="og:image:height" content="454")
+
+    meta(name="twitter:card" content="summary_large_image")
+    meta(name="twitter:site" content="@jsunconf")
+    meta(name="twitter:title" content="JSUnconf 2016")
+    meta(name="twitter:description" content="JavaScript Unconference 2016 in Hamburg. It's your conference. You decide what will happen.")
+    meta(name="twitter:url" content="http://2016.jsunconf.eu")
+    meta(name="twitter:image" content="http://2016.jsunconf.eu/jsunconf-share.jpg")
+
+    link(rel="shortcut icon" href="/favicon.ico" type="image/x-icon")
+    link(rel="apple-touch-icon" href="/apple-touch-icon.png")
+    link(rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png")
+    link(rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png")
+    link(rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png")
+    link(rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png")
+
+    link(href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css' rel='stylesheet' type='text/css')
+    link(href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.12.4/mapbox-gl.css' rel='stylesheet' type='text/css')
+    link(href='/styles/main.css' rel='stylesheet' type='text/css')
+
+  body
+    include _navigation
+    block main
+
+    block sponsors
+      include _sponsors
+
+    footer.main-footer
+      a.main-footer__link(href='https://twitter.com/jsunconf' title='Follow us on Twitter', target='_blank')
+        img(src='/images/twitter.svg', alt='')
+        | Follow us on Twitter
+
+    block scripts
+    include _scripts

@@ -1,0 +1,14 @@
+.awesome
+  position: relative
+  justify-content: space-between
+  flex-wrap: wrap
+
+  @media $mediaQueryBig
+    flex-wrap: nowrap
+    flex-direction: row-reverse
+
+  &__title
+    text-align: center
+
+    @media $mediaQueryBig
+      text-align: right

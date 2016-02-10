@@ -1,0 +1,63 @@
+.mc_embed_signup
+  font-size: 1.5rem
+  margin: emCalc(40) auto
+
+.stay-up-to-date
+  line-height: 1.666
+  position: relative
+  max-width: 18.75em
+
+  input[type="email"]
+    font-weight: 300
+    line-height: inherit
+    width: 100%
+    display: inline-block
+    background: transparent
+    border: none
+    border-bottom: 2px solid #fff
+    padding-right: 2.2em
+
+  button
+    font-weight: 800
+    line-height: inherit
+    background: transparent
+    border: none
+    margin: 0
+    padding: 0
+    position: absolute
+    box-shadow: none
+    top: 0
+    right: 0
+
+    &:after
+      content: ""
+      display: inline-block
+      width: 0.5em
+      height: .6em
+      background: transparent url("../images/arrow-right.svg") no-repeat scroll 50% center
+      background-size: 100%
+      vertical-align: baseline
+      margin-left: 0.3em
+      transition: -webkit-transform .3s ease-in-out
+      transition: transform .3s easeout
+
+  label
+    font-size: 0.5833333333em
+    display: inline-block
+    width: 100%
+    text-align: center
+    text-align: left
+
+.stay-up-to-date input,
+.stay-up-to-date input:hover,
+.stay-up-to-date input:focus
+  outline: none
+
+.stay-up-to-date button:hover:after,
+.stay-up-to-date button:focus:after
+  transform: translateX(0.2em)
+  transform: translateX(0.2em)
+
+.stay-up-to-date button:hover,
+.stay-up-to-date button:focus
+  background-color: transparent

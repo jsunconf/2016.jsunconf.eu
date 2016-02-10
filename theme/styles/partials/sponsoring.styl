@@ -1,0 +1,28 @@
+.sponsoring
+  font-size: 1rem
+  position: relative
+  margin-bottom: emCalc(400)
+
+  @media $mediaQueryBig
+    margin-bottom: emCalc(80)
+
+  &:before
+    content: ''
+
+    position: absolute
+    top: 100%
+
+    width: 100%
+    height: 100%
+
+    background-image: url('../images/sponsor.jpg')
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+
+    z-index: -1
+
+    @media $mediaQueryBig
+      top: 0
+      right: 0
+      width: 50%

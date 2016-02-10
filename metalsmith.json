@@ -1,23 +1,27 @@
 {
-    "metadata": {
-        "title": "jsunconf 2016",
-        "description": "The unconference that started it all."
+  "metadata": {
+    "title": "jsunconf 2016",
+    "description": "The unconference that started it all."
+  },
+  "source": "content",
+  "plugins": {
+    "metalsmith-metadata": {
+      "sponsors": "sponsors.yaml"
     },
-    "plugins": {
-      "metalsmith-collections": {
-        "news": {
-          "pattern": "post*"
-        }
-      },
-        "metalsmith-markdown": {},
-        "metalsmith-permalinks": {
-            "pattern": ":title"
-        },
-        "metalsmith-templates": {
-          "pretty": true,
-          "engine": "jade",
-          "directory": "templates"
-        },
-        "metalsmith-stylus": {}
+    "metalsmith-markdown": {},
+    "metalsmith-permalinks": {
+      "pattern": ":url"
+    },
+    "metalsmith-templates": {
+      "engine": "jade",
+      "directory": "theme/jade"
+    },
+    "metalsmith-assets": {
+      "source": "./theme/assets",
+      "destination": "./"
+    },
+    "metalsmith-stylus": {
+      "paths": ["theme/styles"]
     }
+  }
 }
