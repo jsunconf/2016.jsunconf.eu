@@ -77,3 +77,11 @@
   twitter: "@ubilabs"
   image: ubilabs.svg
   description: "Ubilabs is a software company based in Hamburg and San Francisco. With around 30 specialists – developers, concept developers, project managers and designers – we realize projects for renowned customers in Europe and the United States."
+
+-
+  name: "Small Improvements"
+  level: Gold
+  url: "https://www.small-improvements.com/careers/"
+  twitter: "@smallimprove"
+  image: smallimprovements.svg
+  description: "Architecture. Performance. Usability. We're taking AngularJS to the extreme. Join us! Our SAAS feedback platform helps 450 paying customers communicate better. Our client list includes Twitch, Pinterest, Atlassian, SendGrid and Disqus, and our product is rolled out from the intern to the CEO. We are looking for enthusiastic and experienced AngularJS developers to help us move faster. We're self-funded, profitable and nice too. Learn more online, or simply drop by for a coffee!"
