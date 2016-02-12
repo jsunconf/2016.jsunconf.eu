@@ -85,3 +85,11 @@
   twitter: "@smallimprove"
   image: smallimprovements.svg
   description: "Architecture. Performance. Usability. We're taking AngularJS to the extreme. Join us! Our SAAS feedback platform helps 450 paying customers communicate better. Our client list includes Twitch, Pinterest, Atlassian, SendGrid and Disqus, and our product is rolled out from the intern to the CEO. We are looking for enthusiastic and experienced AngularJS developers to help us move faster. We're self-funded, profitable and nice too. Learn more online, or simply drop by for a coffee!"
+
+-
+  name: "Thinktecture"
+  level: Silver
+  url: "http://www.thinktecture.com/"
+  twitter: "@thinktecture"
+  image: thinktecture.svg
+  description: "We’ve been building HTML5/JS apps together with our clients’ dev teams for several years. We were .NET developers on the client, but have seen the light for real cross-platform. We help developers architect and build JavaScript-based SPA browser and hybrid apps. We are a small group of passionate developers in Southern Germany (BY and BW)."
