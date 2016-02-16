@@ -2,11 +2,22 @@
   font-size: remCalc(16, 11)
   display: flex
   justify-content: flex-end
+  align-items: flex-start
   margin-bottom: emCalc(15)
   min-height: emCalc(50)
 
   @media $mediaQuerySmall
     font-size: 1rem
+
+  &__home
+    border-bottom: 0
+    margin: 1em
+    &__image
+      width: emCalc(100)
+      height: emCalc(100)
+
+    .index &
+      display: none
 
   &__list
     display: flex
@@ -16,12 +27,3 @@
 
     &__item a
       border: none
-
-  &__ticket-button
-    display: none
-    align-self: flex-end
-    border-top-left-radius: 0
-    border-top-right-radius: 0
-
-    @media $mediaQuerySmall
-      display: block

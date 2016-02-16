@@ -40,9 +40,13 @@
       height: emCalc(760px)
 
   &__logo
-    max-width: emCalc(160)
-    max-height: emCalc(160)
+    font-size: 1rem
+    height: emCalc(160)
+    width: 100%
     margin-bottom: emCalc(45)
+    &__image
+      max-width: emCalc(160)
+      max-height: emCalc(160)
 
   &__title
     font-size: emCalc(24)
@@ -62,9 +66,6 @@
     font-weight: 100
     text-transform: uppercase
     text-align: center
-
-    @media $mediaQueryBig
-      text-align: left
 
   span
     font-weight: 800
