@@ -39,17 +39,16 @@ html
     link(href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.12.4/mapbox-gl.css' rel='stylesheet' type='text/css')
     link(href='/styles/main.css' rel='stylesheet' type='text/css')
 
-  body
+  body(class=template.replace('.jade', ''))
     include _navigation
+    include _ticket-button
+    
     block main
 
     block sponsors
       include _sponsors
 
-    footer.main-footer
-      a.main-footer__link(href='https://twitter.com/jsunconf' title='Follow us on Twitter', target='_blank')
-        img(src='/images/twitter.svg', alt='')
-        | Follow us on Twitter
+    include _footer
 
     block scripts
     include _scripts
