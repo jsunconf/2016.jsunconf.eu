@@ -20,5 +20,64 @@ section.section.section--date
         style: 'mapbox://styles/jsunconf/ciju5ysiq00fvbpm373dkh84x',
         center: [9.96, 53.56],
         zoom: 12,
-        interactive: false
+        scrollZoom: false,
+        touchZoomRotate: false,
+        dragPan: false
+      });
+              
+      /*
+       * Available marker types are: bar and university.
+       * Can add more, just ping me.
+       */
+      var markers = {
+        type: 'FeatureCollection',
+        features: [
+          {
+            type: 'Feature',
+            properties: {
+              'marker-symbol': 'university',
+              description: '<strong>Universität Hamburg</strong><br />Geomatikum<br />Bundesstraße 55<br />20146 Hamburg<br /><br /><a href="https://www.google.com/maps?q=53.5682,9.9744+%28Geomatikum,+Bundesstra%C3%9Fe+55,+20146+Hamburg,+Germany%29" target="_blank" title="Navigate">&raquo; Navigate here</a>'
+            },
+            geometry: {
+              type: 'Point',
+              coordinates: [9.9744,53.5682]
+            }
+          }
+        ]
+      }
+
+      map.on('style.load', function () {
+        map.addSource('markers', {
+          type: 'geojson',
+          data: markers
+        });
+        map.addLayer({
+          id: 'markers',
+          interactive: true,
+          type: 'symbol',
+          source: 'markers',
+          layout: {
+            'icon-allow-overlap': true,
+            'icon-image': '{marker-symbol}',
+            'icon-offset': [0, -16]
+          }
+        });
+      });
+
+      map.on('click', function (e) {
+        map.featuresAt(e.point, {layer: 'markers', radius: 32, includeGeometry: true}, function (err, features) {
+          if (err || !features.length) return;
+
+          var feature = features[0];
+          new mapboxgl.Popup()
+            .setLngLat(feature.geometry.coordinates)
+            .setHTML(feature.properties.description)
+            .addTo(map);
+        });
+      });
+
+      map.on('mousemove', function (e) {
+        map.featuresAt(e.point, {layer: 'markers', radius: 32}, function (err, features) {
+          map.getCanvas().style.cursor = (!err && features.length) ? 'pointer' : '';
+        });
       });
