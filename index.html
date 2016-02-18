@@ -6,12 +6,71 @@ var map = new mapboxgl.Map({
   style: 'mapbox://styles/jsunconf/ciju5ysiq00fvbpm373dkh84x',
   center: [9.96, 53.56],
   zoom: 12,
-  interactive: false
+  scrollZoom: false,
+  touchZoomRotate: false,
+  dragPan: false
+});
+        
+/*
+ * Available marker types are: bar and university.
+ * Can add more, just ping me.
+ */
+var markers = {
+  type: 'FeatureCollection',
+  features: [
+    {
+      type: 'Feature',
+      properties: {
+        'marker-symbol': 'university',
+        description: '<strong>Universität Hamburg</strong><br />Geomatikum<br />Bundesstraße 55<br />20146 Hamburg<br /><br /><a href="https://www.google.com/maps?q=53.5682,9.9744+%28Geomatikum,+Bundesstra%C3%9Fe+55,+20146+Hamburg,+Germany%29" target="_blank" title="Navigate">&raquo; Navigate here</a>'
+      },
+      geometry: {
+        type: 'Point',
+        coordinates: [9.9744,53.5682]
+      }
+    }
+  ]
+}
+
+map.on('style.load', function () {
+  map.addSource('markers', {
+    type: 'geojson',
+    data: markers
+  });
+  map.addLayer({
+    id: 'markers',
+    interactive: true,
+    type: 'symbol',
+    source: 'markers',
+    layout: {
+      'icon-allow-overlap': true,
+      'icon-image': '{marker-symbol}',
+      'icon-offset': [0, -16]
+    }
+  });
+});
+
+map.on('click', function (e) {
+  map.featuresAt(e.point, {layer: 'markers', radius: 32, includeGeometry: true}, function (err, features) {
+    if (err || !features.length) return;
+
+    var feature = features[0];
+    new mapboxgl.Popup()
+      .setLngLat(feature.geometry.coordinates)
+      .setHTML(feature.properties.description)
+      .addTo(map);
+  });
+});
+
+map.on('mousemove', function (e) {
+  map.featuresAt(e.point, {layer: 'markers', radius: 32}, function (err, features) {
+    map.getCanvas().style.cursor = (!err && features.length) ? 'pointer' : '';
+  });
 });</script></div></section><section class="section section--sponsoring sponsoring"><div class="section__content"><h2>How To <br/> become a <br/><span class="bold">Sponsor</span></h2><div class="section__copy"> <p>We are expecting sponsorship slots to be taken very quickly.
 View the detailled information about <a href="https://drive.google.com/folderview?id=0B6ZGLuPqMywcX3l4cG9WUkNHX1E&usp=drive_web#list">various sponsoring options</a>.
 Please send us your feedback by the end of February, 2016.</p></div><a href="mailto:sponsoring@jsunconf.eu?subject=Sponsoring the JSUnconf 2016" class="button">Send us an email</a></div></section><section class="section section--awesome awesome"><div class="section__content"><h2 class="awesome__title">What makes an<b> Unconf</b> so awesome?</h2><div class="section__copy"><p>You! Everybody can propose a talk. Everybody votes for the talks they want to see. The most voted talks will be held. You decide what will happen!</p></div></div><div class="section__content"><img src="/images/voting.jpg" class="section__image"/></div></section><section id="code-of-conduct" class="section section--coc"><div class="section__content"><h2>Code of Conduct</h2><div class="section__copy"><p> 
 The heart of JSUnconf is people. <a href="/coc">This guideline</a><is>meant to support a happy, productive and safe event experience that can welcome new ideas and inspiration for all attendees. Regardless of gender, sexual orientation, age, ability, ethnicity, socioeconomic status, and religion (or lack thereof). We gain strength from diversity, and actively seek participation from those who enhance it.</is></p><p> 
-Read our full<a href="/coc">Code of Conduct!</a></p></div></div></section><section class="section section--sponsors sponsors"><div class="section__content section__content--full-width"><h2 class="sponsors__title">Great companies</h2><div class="sponsors__level"><h4 class="sponsors__level__name">Gold</h4><div class="sponsors__level__logos"><a href="http://sinnerschrader.com" title="SinnerSchrader" target="_blank" class="sponsors__level__logos__link sponsors__level__logos__link--Gold"><img src="/images/sponsors/sinnerschrader.svg" alt="SinnerSchrader"/></a><a href="http://www.trivago.com/jobs" title="trivago" target="_blank" class="sponsors__level__logos__link sponsors__level__logos__link--Gold"><img src="/images/sponsors/trivago.svg" alt="trivago"/></a><a href="https://www.small-improvements.com/careers/" title="Small Improvements" target="_blank" class="sponsors__level__logos__link sponsors__level__logos__link--Gold"><img src="/images/sponsors/smallimprovements.svg" alt="Small Improvements"/></a></div></div><div class="sponsors__level"><h4 class="sponsors__level__name">Silver</h4><div class="sponsors__level__logos"><a href="http://www.gocw.de" title="ClassWizard" target="_blank" class="sponsors__level__logos__link sponsors__level__logos__link--Silver"><img src="/images/sponsors/classwizard.svg" alt="ClassWizard"/></a><a href="https://www.nexinto.com/nbc/" title="Nexinto" target="_blank" class="sponsors__level__logos__link sponsors__level__logos__link--Silver"><img src="/images/sponsors/nexinto.svg" alt="Nexinto"/></a><a href="http://dreamit.de/" title="DreamIT" target="_blank" class="sponsors__level__logos__link sponsors__level__logos__link--Silver"><img src="/images/sponsors/dreamit.svg" alt="DreamIT"/></a><a href="http://www.ubilabs.net/" title="Ubilabs" target="_blank" class="sponsors__level__logos__link sponsors__level__logos__link--Silver"><img src="/images/sponsors/ubilabs.svg" alt="Ubilabs"/></a><a href="http://www.thinktecture.com/" title="Thinktecture" target="_blank" class="sponsors__level__logos__link sponsors__level__logos__link--Silver"><img src="/images/sponsors/thinktecture.svg" alt="Thinktecture"/></a></div></div><div class="sponsors__level"><h4 class="sponsors__level__name">Bronze</h4><div class="sponsors__level__logos"><a href="http://www.jvm.com/" title="Jung von Matt" target="_blank" class="sponsors__level__logos__link sponsors__level__logos__link--Bronze"><img src="/images/sponsors/jvm.svg" alt="Jung von Matt"/></a><a href="https://sitegeist.de/" title="sitegeist media solutions GmbH" target="_blank" class="sponsors__level__logos__link sponsors__level__logos__link--Bronze"><img src="/images/sponsors/sitegeist.svg" alt="sitegeist media solutions GmbH"/></a><a href="http://akra.de/" title="AKRA" target="_blank" class="sponsors__level__logos__link sponsors__level__logos__link--Bronze"><img src="/images/sponsors/akra.svg" alt="AKRA"/></a><a href="http://www.silpion.de/" title="Silpion" target="_blank" class="sponsors__level__logos__link sponsors__level__logos__link--Bronze"><img src="/images/sponsors/silpion.svg" alt="Silpion"/></a></div></div></div></section><footer class="main-footer"><div class="main-footer__people"></div><a href="https://twitter.com/jsunconf" title="Follow us on Twitter" target="_blank" class="main-footer__link"><img src="/images/twitter.svg" alt=""/>Follow us on Twitter</a></footer><script>!function(j,s,u,n,c,o,N,f){j.GoogleAnalyticsObject=u;j[u]||(j[u]=function(){
+Read our full<a href="/coc">Code of Conduct!</a></p></div></div></section><section class="section section--sponsors sponsors"><div class="section__content section__content--full-width section__content--centered"><h2 class="sponsors__title">Great companies</h2><div class="sponsors__level"><h4 class="sponsors__level__name">Gold</h4><div class="sponsors__level__logos"><a href="http://sinnerschrader.com" title="SinnerSchrader" target="_blank" class="sponsors__level__logos__link sponsors__level__logos__link--Gold"><img src="/images/sponsors/sinnerschrader.svg" alt="SinnerSchrader"/></a><a href="http://www.trivago.com/jobs" title="trivago" target="_blank" class="sponsors__level__logos__link sponsors__level__logos__link--Gold"><img src="/images/sponsors/trivago.svg" alt="trivago"/></a><a href="https://www.small-improvements.com/careers/" title="Small Improvements" target="_blank" class="sponsors__level__logos__link sponsors__level__logos__link--Gold"><img src="/images/sponsors/smallimprovements.svg" alt="Small Improvements"/></a></div></div><div class="sponsors__level"><h4 class="sponsors__level__name">Silver</h4><div class="sponsors__level__logos"><a href="http://www.gocw.de" title="ClassWizard" target="_blank" class="sponsors__level__logos__link sponsors__level__logos__link--Silver"><img src="/images/sponsors/classwizard.svg" alt="ClassWizard"/></a><a href="https://www.nexinto.com/nbc/" title="Nexinto" target="_blank" class="sponsors__level__logos__link sponsors__level__logos__link--Silver"><img src="/images/sponsors/nexinto.svg" alt="Nexinto"/></a><a href="http://dreamit.de/" title="DreamIT" target="_blank" class="sponsors__level__logos__link sponsors__level__logos__link--Silver"><img src="/images/sponsors/dreamit.svg" alt="DreamIT"/></a><a href="http://www.ubilabs.net/" title="Ubilabs" target="_blank" class="sponsors__level__logos__link sponsors__level__logos__link--Silver"><img src="/images/sponsors/ubilabs.svg" alt="Ubilabs"/></a><a href="http://www.thinktecture.com/" title="Thinktecture" target="_blank" class="sponsors__level__logos__link sponsors__level__logos__link--Silver"><img src="/images/sponsors/thinktecture.svg" alt="Thinktecture"/></a><a href="http://www.coremedia.com/" title="CoreMedia" target="_blank" class="sponsors__level__logos__link sponsors__level__logos__link--Silver"><img src="/images/sponsors/coremedia.svg" alt="CoreMedia"/></a><a href="http://www.neuland-bfi.de/" title="neuland Büro für Informatik" target="_blank" class="sponsors__level__logos__link sponsors__level__logos__link--Silver"><img src="/images/sponsors/neuland.svg" alt="neuland Büro für Informatik"/></a></div></div><div class="sponsors__level"><h4 class="sponsors__level__name">Bronze</h4><div class="sponsors__level__logos"><a href="http://www.jvm.com/" title="Jung von Matt" target="_blank" class="sponsors__level__logos__link sponsors__level__logos__link--Bronze"><img src="/images/sponsors/jvm.svg" alt="Jung von Matt"/></a><a href="https://sitegeist.de/" title="sitegeist media solutions GmbH" target="_blank" class="sponsors__level__logos__link sponsors__level__logos__link--Bronze"><img src="/images/sponsors/sitegeist.svg" alt="sitegeist media solutions GmbH"/></a><a href="http://akra.de/" title="AKRA" target="_blank" class="sponsors__level__logos__link sponsors__level__logos__link--Bronze"><img src="/images/sponsors/akra.svg" alt="AKRA"/></a><a href="http://www.silpion.de/" title="Silpion" target="_blank" class="sponsors__level__logos__link sponsors__level__logos__link--Bronze"><img src="/images/sponsors/silpion.svg" alt="Silpion"/></a></div></div><a href="/sponsors/" title="More about our sponsors" class="button button--small">More about our sponsors</a></div></section><footer class="main-footer"><div class="main-footer__people"></div><a href="https://twitter.com/jsunconf" title="Follow us on Twitter" target="_blank" class="main-footer__link"><img src="/images/twitter.svg" alt=""/>Follow us on Twitter</a></footer><script>!function(j,s,u,n,c,o,N,f){j.GoogleAnalyticsObject=u;j[u]||(j[u]=function(){
 (j[u].q=j[u].q||[]).push(arguments)});j[u].l=+new Date;o=s.createElement(n);
 N=s.getElementsByTagName(n)[0];o.src=c;N.parentNode.insertBefore(o,N)}
 (window,document,'ga','script','//www.google-analytics.com/analytics.js');
