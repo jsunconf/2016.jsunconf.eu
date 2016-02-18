@@ -1,5 +1,5 @@
 section.section.section--sponsors.sponsors
-  .section__content.section__content--full-width
+  .section__content.section__content--full-width.section__content--centered
     h2.sponsors__title
       | Great companies
 
@@ -13,3 +13,5 @@ section.section.section--sponsors.sponsors
             each sponsor in levelSponsors
               a.sponsors__level__logos__link(href=sponsor.url, title=sponsor.name, target="_blank", class="sponsors__level__logos__link--"+level)
                 img(src="/images/sponsors/"+sponsor.image, alt=sponsor.name)
+
+    a(href="/sponsors/", title="More about our sponsors").button.button--small More about our sponsors
