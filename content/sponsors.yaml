@@ -109,3 +109,12 @@
   twitter: "@neuland"
   image: neuland.svg
   description: "The neuland bremen GmbH is one of the 10 largest e-commerce service providers in Germany and is placed 8th in the 2015 e-commerce service provider ranking. We only do consulting and development in the field of e-commerce. Our customers include companies like Breuninger (fashion), Douglas (perfumery), Höffner (furniture) or OBI (DIY). Our core competence is the creation of of highly customised, high-quality shop solutions for large enterprises. We use agile and iterative methods for all project operations, especially in planning, development and control. We support our customers to adapt their business processes. We manage online projects - with everything that goes with it. Our team is talented and well trained - we even have fun at work. What can you expect? Smart people in self-organised teams. Critical thinking and the sometimes uncomfortable questions that go with it. Direct, open collaboration with our customers; we see ourselves as partners. The conviction, that what we do makes a difference - this is our recipe for success."
+
+-
+  name: MySQL
+  level: Bronze
+  url: http://www.mysql.com/
+  twitter: "@MySQL"
+  image: mysql.svg
+
+  description: MySQL is the world's most popular open source database. With its proven performance, reliability and ease-of-use, MySQL has become the leading database choice for web-based applications, used by high profile web properties including Facebook, Twitter, YouTube, Yahoo! and many more. Additionally, it is an extremely popular choice as embedded database, distributed by over 3,000 ISVs & OEMs. Oracle drives MySQL innovation, constantly improving MySQL solutions and delivering new capabilities to power next generation web, cloud, mobile and embedded applications.  For more information, visit [www.mysql.com](http://www.mysql.com/)
