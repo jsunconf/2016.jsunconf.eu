@@ -1,28 +1,37 @@
 .sponsors
   font-size: 1rem
   margin-bottom: emCalc(100px)
+
   &__title
     text-align: center
     margin-bottom: emCalc(10px)
+
   &__level
     margin-bottom: emCalc(100px)
     text-align: center
+
     &__name
       margin-bottom: emCalc(20px)
+
     &__logos
       display: flex
       justify-content: space-around
       align-items: center
       flex-wrap: wrap
+
       &__link
         flex-shrink: 0
         height: emCalc(60px)
         margin-bottom: 1em
         border-bottom-color: transparent
+        max-width: emCalc(250px)
+
         &--Silver
           height: emCalc(50px)
+
         &--Bronze
           height: emCalc(40px)
+
         img
           height: 100%
 
@@ -32,21 +41,27 @@
   display: flex
   flex-wrap: wrap
   justify-content: center
+
   &__logo
     flex-shrink: 0
     width: 100%
     height: emCalc(100px)
     border-bottom: none
     margin-bottom: emCalc(20px)
+
     @media $mediaQueryBig
       margin-bottom: emCalc(40px)
+
     &--Silver
       height: emCalc(80px)
+
     &--Bronze
       height: emCalc(60px)
+
     &__image
-      max-width: 100%
+      max-width: emCalc(470px)
       max-height: 100%
+
   &__meta
     width: 100%
     display: flex
@@ -54,21 +69,27 @@
     align-items: center
     flex-direction: column
     margin-bottom: emCalc(25px)
+
     @media $mediaQueryBig
       width: 30%
       align-items: flex-end
       margin-bottom: 0
+
     &__info
       margin: 0
       text-align: right
+
       &--name
         display: none
+
         @media $mediaQueryBig
           display: inline-block
+
   &__description
     width: 100%
     max-width: 35em
     text-align: left
+
     @media $mediaQueryBig
       width: 65%
       margin-left: 5%
