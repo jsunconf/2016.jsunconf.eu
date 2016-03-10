@@ -5,7 +5,7 @@ section.section.section--date
       | Hamburg
       
     .section__copy 
-      p Like in the last years, JSUnconf will take place in the center of Hamburg. More details on the location soon! 
+      p Like in the last years, JSUnconf will take place in the center of Hamburg. We return to the location of the first JSUnconf: Geomatikum, Universität Hamburg, Bundesstraße 55, 20146 Hamburg.
 
     .map
       .map__canvas#map-canvas
@@ -21,9 +21,10 @@ section.section.section--date
         center: [9.96, 53.56],
         zoom: 12,
         scrollZoom: false,
-        touchZoomRotate: false,
-        dragPan: false
+        touchZoomRotate: false
       });
+      
+      map.addControl(new mapboxgl.Navigation());
               
       /*
        * Available marker types are: bar and university.
