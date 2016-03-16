@@ -314,10 +314,6 @@ h4 {
 .section--date h2 {
   text-align: center;
 }
-.section--coc {
-  justify-content: center;
-  margin-top: 6.25em;
-}
 .section__content {
   width: 100%;
   text-align: center;
@@ -488,6 +484,35 @@ h4 {
 }
 @media (min-width: 900px) {
   .sponsoring:before {
+    top: 0;
+    right: 0;
+    width: 50%;
+  }
+}
+.section--coc {
+  font-size: 1rem;
+  position: relative;
+  margin-bottom: 25em;
+}
+@media (min-width: 900px) {
+  .section--coc {
+    margin-bottom: 5em;
+  }
+}
+.section--coc:before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/sponsor.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+@media (min-width: 900px) {
+  .section--coc:before {
     top: 0;
     right: 0;
     width: 50%;
