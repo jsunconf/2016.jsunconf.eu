@@ -118,3 +118,12 @@
   image: mysql.svg
 
   description: MySQL is the world's most popular open source database. With its proven performance, reliability and ease-of-use, MySQL has become the leading database choice for web-based applications, used by high profile web properties including Facebook, Twitter, YouTube, Yahoo! and many more. Additionally, it is an extremely popular choice as embedded database, distributed by over 3,000 ISVs & OEMs. Oracle drives MySQL innovation, constantly improving MySQL solutions and delivering new capabilities to power next generation web, cloud, mobile and embedded applications.  For more information, visit [www.mysql.com](http://www.mysql.com/)
+
+-
+  name: Mozilla
+  level: Bronze
+  url: https://www.mozilla.org/about
+  twitter: "@mozilla"
+  image: mozilla.svg
+
+  description: At Mozilla, we’re a global community of technologists, thinkers and builders working together so people worldwide can be informed contributors and creators of the Web. Our mission is to ensure the Internet is a global public resource, open and accessible to all, where individuals can shape their own experience and are empowered, safe and independent.

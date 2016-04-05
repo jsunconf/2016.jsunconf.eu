@@ -1,0 +1,169 @@
+fieldset
+  border: none
+  margin-bottom: 1.25em
+
+input,
+textarea
+  outline: none
+
+input[type="text"],
+textarea
+  padding: 1em .6em
+  font-size: 1rem
+  display: block
+  width: 100%
+  border: none
+
+textarea
+  height: 6em
+
+.contriboot
+  width: 100%
+
+.submit-form
+  max-width: 500px
+  margin: 1em auto
+  &__header
+    h3, fieldset
+      display: inline-block
+    h3
+      margin-right: .4em
+
+  & input[type="radio"]
+    display:none
+
+  & input[type="radio"] + label
+    background-color:#999
+    box-shadow: 2px 2px 0px 2px #777
+    padding:4px 11px
+    font-family:Arial
+    font-size:16px
+    cursor: pointer
+    margin-right: 10px
+    padding-bottom: 0
+
+  & input[type="radio"]:checked + label
+    background-color: #0069b4
+    box-shadow: 2px 2px 0px 2px #004b9f
+
+.entries-container
+  display: flex
+  flex-wrap: nowrap
+  justify-content: center
+  width: 100%
+  @media (min-width: 50em)
+    flex-wrap: wrap
+.entries
+  width: 100%
+  max-width: 50em
+  margin: 2em
+  flex-grow: 1
+  flex-shrink: 1
+  @media (min-width: 50em)
+    width: 50%
+
+.entry
+  margin-bottom: 10px
+  border: 4px solid transparent
+  position: relative
+  transition: all .3s ease-in-out
+  &:hover, &:focus, &--active
+    border-color: rgba(0,0,0,0.14)
+    background: rgba(0,0,0,0.07)
+  &--active
+    border-color: #0069b4
+    &:hover, &:focus
+      border-color: #0069b4
+
+  &__header
+    display: flex
+    justify-content: space-between
+    align-items: baseline
+
+    &__title
+      width: 100%
+      border: none
+      padding: 10px
+      h3
+        font-size: 1.75em
+        margin: 0
+      small
+        font-size: .5em
+        margin-left: 1em
+
+    &__votes
+      display: flex
+      align-items: center
+      width: 5em
+      flex-shrink: 0
+      padding-left: 15px
+
+      &__button
+        margin-right: 5px
+        color: #0069b4
+        background: none
+        border: none
+        font-size: 26px
+        cursor: pointer
+
+  &__description
+    padding: 10px 75px 10px 10px
+
+  &:not(&--active) &__description
+    display: none
+
+.user
+  display: flex
+  justify-content: center
+  align-items: baseline
+  max-width: 500px
+  margin: 3em auto 2em auto
+
+  &__message
+    display: inline-block
+    margin-right: 10px
+
+  &__button-login,
+  &__button-logout
+    cursor: pointer
+    box-shadow: 2px 2px 0px 2px #004b9f
+    padding: 4px 11px
+
+/**
+ * Spinner
+ */
+.react-spinner {
+  position: relative;
+  width: 50px;
+  height: 32px;
+  left: 50%;
+  margin: 5em 0 2em 0
+}
+
+.react-spinner_bar {
+  -webkit-animation: react-spinner_spin 1.2s linear infinite;
+  -moz-animation: react-spinner_spin 1.2s linear infinite;
+  animation: react-spinner_spin 1.2s linear infinite;
+  border-radius: 5px;
+  background-color: white;
+  position: absolute;
+  width: 20%;
+  height: 7.8%;
+  top: -3.9%;
+  left: -10%;
+}
+
+@keyframes react-spinner_spin {
+ 0% { opacity: 1; }
+ 100% { opacity: 0.15; }
+}
+
+@-moz-keyframes react-spinner_spin {
+ 0% { opacity: 1; }
+ 100% { opacity: 0.15; }
+}
+
+@-webkit-keyframes react-spinner_spin {
+ 0% { opacity: 1; }
+ 100% { opacity: 0.15; }
+}
