@@ -702,23 +702,26 @@ textarea {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
+  flex-direction: column;
   width: 100%;
 }
 @media (min-width: 50em) {
   .entries-container {
     flex-wrap: wrap;
+    flex-direction: row;
   }
 }
 .entries {
   width: 100%;
   max-width: 50em;
-  margin: 2em;
+  margin: 0;
   flex-grow: 1;
   flex-shrink: 1;
 }
 @media (min-width: 50em) {
   .entries {
     width: 50%;
+    margin: 2em;
   }
 }
 .entry {
