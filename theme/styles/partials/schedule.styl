@@ -1,0 +1,35 @@
+.schedule
+  width: 100%
+  .section__content
+    width: 100%
+  h3
+    padding: 5px
+  table
+    font-size: 1.25em
+  tr:nth-child(2n+1)
+    background-color: #a49f9f
+  td
+    padding: 5px
+  td.schedule__time
+    text-align: center
+  .schedule__overview
+    position: relative
+    justify-content: space-around
+    flex-wrap: wrap
+    display: flex
+
+
+.schedule2
+  position: relative
+  justify-content: space-between
+  flex-wrap: wrap
+
+  @media $mediaQueryBig
+    flex-wrap: nowrap
+    flex-direction: row-reverse
+
+  &__title
+    text-align: center
+
+    @media $mediaQueryBig
+      text-align: right
