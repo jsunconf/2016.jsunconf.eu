@@ -125,6 +125,7 @@ h4 {
 }
 .exerpt {
   font-size: 1.125rem;
+  line-height: 2em;
 }
 .button {
   font-size: 1.375rem;
@@ -307,17 +308,17 @@ h4 {
   display: flex;
   margin-top: 6.25em;
 }
-.section--schedule,
+.section--schedule {
+  width: 100%;
+}
 .section--date {
   justify-content: center;
   width: auto;
   flex-grow: 1;
 }
-.section--schedule .section__content,
 .section--date .section__content {
   width: auto;
 }
-.section--schedule h2,
 .section--date h2 {
   text-align: center;
 }
@@ -525,51 +526,28 @@ h4 {
     width: 50%;
   }
 }
-.schedule {
+.section--schedule .section__content {
   width: 100%;
 }
-.schedule .section__content {
-  width: 100%;
-}
-.schedule h3 {
+.section--schedule h3 {
   padding: 5px;
 }
-.schedule table {
-  font-size: 1.25em;
+.section--schedule table {
+  font-size: 1.125em;
 }
-.schedule tr:nth-child(2n+1) {
+.section--schedule tr:nth-child(2n+1) {
   background-color: #a49f9f;
 }
-.schedule td {
-  padding: 5px;
+.section--schedule td {
+  padding: 20px 10px;
 }
-.schedule td.schedule__time {
+.section--schedule td.schedule__time {
   text-align: center;
 }
-.schedule .schedule__overview {
-  position: relative;
+.section--schedule .schedules-container {
   justify-content: space-around;
   flex-wrap: wrap;
   display: flex;
-}
-.schedule2 {
-  position: relative;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-@media (min-width: 900px) {
-  .schedule2 {
-    flex-wrap: nowrap;
-    flex-direction: row-reverse;
-  }
-}
-.schedule2__title {
-  text-align: center;
-}
-@media (min-width: 900px) {
-  .schedule2__title {
-    text-align: right;
-  }
 }
 .sponsors {
   font-size: 1rem;
