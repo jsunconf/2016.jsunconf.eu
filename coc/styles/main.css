@@ -330,6 +330,9 @@ h4 {
 .section--date h2 {
   text-align: center;
 }
+.section--coc {
+  margin-top: 6.25em;
+}
 .section__content {
   width: 100%;
   text-align: center;
@@ -474,6 +477,47 @@ h4 {
 @media (min-width: 900px) {
   .awesome__title {
     text-align: right;
+  }
+}
+#sightseeing {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#sightseeing__title {
+  text-align: center;
+}
+@media (min-width: 900px) {
+  #sightseeing__title {
+    text-align: right;
+  }
+}
+.section--coc {
+  font-size: 1rem;
+  position: relative;
+  margin-bottom: 25em;
+}
+@media (min-width: 900px) {
+  .section--coc {
+    margin-bottom: 5em;
+  }
+}
+.section--coc:before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/sponsor.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+@media (min-width: 900px) {
+  .section--coc:before {
+    top: 0;
+    right: 0;
+    width: 50%;
   }
 }
 .sponsoring {
