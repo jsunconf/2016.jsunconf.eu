@@ -3,13 +3,19 @@ section.section.section--date
     h2
       | <span class="bold">23</span><span class="light">rd</span> & <span class="bold">24</span><span class="light">th</span> of April <br>
       | Hamburg
-      
-    .section__copy 
-      p Like in the last years, JSUnconf will take place in the center of Hamburg. We return to the location of the first JSUnconf: Geomatikum, Universität Hamburg, Bundesstraße 55, 20146 Hamburg.
+
+    .section__copy
+      p Like in the last years, JSUnconf will take place in the center of Hamburg. We return to the location of the first JSUnconf
+        br
+        | Geomatikum - Universität Hamburg
+        br
+        | Bundesstraße 55
+        br
+        | 20146 Hamburg
 
     .map
       .map__canvas#map-canvas
-  
+
     script(src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.12.4/mapbox-gl.js')
 
     script.
@@ -23,9 +29,9 @@ section.section.section--date
         scrollZoom: false,
         touchZoomRotate: false
       });
-      
+
       map.addControl(new mapboxgl.Navigation());
-              
+
       /*
        * Available marker types are: bar and university.
        * Can add more, just ping me.
