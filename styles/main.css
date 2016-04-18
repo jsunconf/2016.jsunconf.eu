@@ -235,6 +235,14 @@ h4 {
   text-transform: uppercase;
   text-align: center;
 }
+.main-header__content {
+  text-align: center;
+  margin: 1.25em auto;
+}
+.main-header__content p {
+  line-height: 1.666;
+  position: relative;
+}
 .main-header span {
   font-weight: 800;
 }
